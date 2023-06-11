@@ -9,6 +9,7 @@ import { useRouter } from "next/router"
 import { cursor } from "@/store/slices"
 import { useAppDispatch } from "@/store/hooks"
 import { motion, AnimatePresence, useAnimationControls } from 'framer-motion'
+import Section from "../loco/section"
 
 
 
