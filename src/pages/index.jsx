@@ -1,11 +1,10 @@
 import data from '../projects.json'
 import { useRouter } from 'next/router'
-import Section from '@/components/loco/Section'
+import Section from '@/components/loco/section'
 import OutlineText from '@/components/Animation/OutlineText'
 import TrackingText from '@/components/Animation/TextTracking'
 import LargeTextWithImages from '@/components/atoms/LargeTextWithImages'
 import TextRevealAnimation from '@/components/Animation/TextRevealAnimation'
-
 
 const Home = () => {
   const router = useRouter()
@@ -31,7 +30,7 @@ const Home = () => {
             'web developer.']} />
 
         <section className='lg:pt-[300px] pt-[5rem]  lg:w-[50%] ml-auto pb-[5rem]'>
-          <p className='lg:text-lg text-smd font-medium'>        I am a 21-year-old student currently pursuing a Bachelor's degree in Computer Science at San Francisco State University.
+          <p className='lg:text-lg text-smd font-medium'>  I am a 21-year-old student currently pursuing a Bachelor's degree in Computer Science at San Francisco State University.
             <br /><br /> My passion lies in creating stunning websites that leave a lasting impression.  With a keen eye for design and a focus on delivering exceptional user experiences,  I strive to craft digital masterpieces that combine aesthetics and functionality.   <br /><br />
             As I refine my skills in coding languages, user experience design, and front-end development, I'm actively on the lookout for exciting opportunities to apply my knowledge and contribute to real-world projects. <br /> </p>
 
@@ -56,9 +55,7 @@ const Home = () => {
 
         <TrackingText handleClick={handleSeeProjects} text="See all projects →" className='text-lg text-gray mt-5 cursor-pointer' />
 
-
       </Section>
-
 
       <Section>
         <h1 className='4xl:text-h2-4xl 3xl:text-h2-3xl 2xl:text-h2-2xl xl:text-h2-xl lg:text-h2-lg md:text-h2-md text-h2-sm !font-extrabold '>To get in touch,</h1>
