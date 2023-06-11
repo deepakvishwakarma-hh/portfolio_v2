@@ -1,9 +1,11 @@
 import OutlineText from "../Animation/OutlineText"
+import { Scroll, useLocomotiveScroll } from "react-locomotive-scroll";
 const BackToTop = () => {
+    const { scroll } = useLocomotiveScroll();
     const scrollToTop = () => {
-        window?.scrollTo({
-            top: 0,
-            behavior: "smooth",
+        scroll.scrollTo(0, {
+            duration: 1000, // The duration of the scroll animation in milliseconds
+            easing: [0.25, 0.1, 0.25, 1], // The easing function to use for the animation
         });
     };
     return (
