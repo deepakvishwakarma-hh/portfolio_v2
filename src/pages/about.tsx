@@ -37,16 +37,12 @@ export default function About() {
                                 </div>
                             </p>
                         </section>
-
-
                     </section>
 
 
-                    <Divider />
 
 
                     <section data-scroll-section>
-
                         <section
                             data-scroll
                             data-scroll-speed="5"
@@ -123,7 +119,6 @@ export default function About() {
 
                     </section>
 
-                    <Divider />
 
                 </div>
 
