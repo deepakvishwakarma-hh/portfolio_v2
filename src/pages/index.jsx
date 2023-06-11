@@ -54,7 +54,7 @@ const Home = () => {
             discription={project.overview} />
         ))}
 
-        <TrackingText handleClick={handleSeeAboutMe} text="See all projects →" className='text-lg text-gray mt-5 cursor-pointer' />
+        <TrackingText handleClick={handleSeeProjects} text="See all projects →" className='text-lg text-gray mt-5 cursor-pointer' />
 
 
       </Section>
