@@ -21,79 +21,10 @@ const Home = () => {
 
     <>
 
-      {/* <section className='md:block hidden'>
-        <TextRevealAnimation
-          classNames='lg:mt-[10rem] mt-[5rem]'
-          lines={[
-            "Hello! I'm",
-            'Sahej Tuli,',
-            'a San Francisco',
-            'based front-end',
-            'web developer.']} />
-      </section>
-
-      <section className='md:hidden block'>
-        <TextRevealAnimation
-          classNames='lg:mt-[10rem] mt-[5rem]'
-          lines={[
-            "Hello! I'm",
-            "Sahej Tuli,",
-            "a San",
-            "Francisco",
-            "based front-",
-            "end web",
-            "developer"
-          ]} />
-      </section>
-
-      <section className='lg:mt-[300px] mt-[5rem]  lg:w-[50%] ml-auto mb-[5rem]'>
-        <p className='lg:text-lg text-smd font-medium '>        I am a 21-year-old student currently pursuing a Bachelor's degree in Computer Science at San Francisco State University.
-          <br /><br /> My passion lies in creating stunning websites that leave a lasting impression.  With a keen eye for design and a focus on delivering exceptional user experiences,  I strive to craft digital masterpieces that combine aesthetics and functionality.   <br /><br />
-          As I refine my skills in coding languages, user experience design, and front-end development, I'm actively on the lookout for exciting opportunities to apply my knowledge and contribute to real-world projects. <br /> </p>
-
-        <p className='lg:text-lg text-smd mt-[3rem] font-medium'>Scroll on, brave scroller!</p>
-
-
-        <TrackingText handleClick={handleSeeAboutMe} text="Learn more about me →" className='text-lg text-gray mt-5 cursor-pointer' />
-
-      </section>
-
-      <section>
-        {[data[0], data[1]].map((project) => (
-          <LargeTextWithImages
-            href={project.slug}
-            heading={project.name}
-            second_image_url={project.gallary[1]}
-            first_image_url={project.gallary[0]}
-            discription={project.overview} />
-        ))}
-      </section>
-
-      <TrackingText handleClick={handleSeeProjects} text="See all projects →" className='text-lg text-gray cursor-pointer mt-10' />
-
-      <Footer />
-      <Divider />
-      <BackToTop /> */}
-
       <div data-scroll-container>
         <div className="main">
 
           <section data-scroll-section>
-
-            {/* <h1
-              data-scroll
-              className="text-xl"
-              data-scroll-direction="horizontal"
-              data-scroll-speed={-5}
-              // data-scroll-class="appear"
-              data-scroll-repeat="true">
-              Hello <br />
-              Im Deepak <br />
-              Vishwakarma,
-              Full Stack Dev.
-            </h1> */}
-
-
 
             <TextRevealAnimation
               classNames='lg:mt-[10rem] mt-[5rem]'
@@ -146,7 +77,6 @@ const Home = () => {
 
           </section>
 
-          <BackToTop />
 
 
         </div>

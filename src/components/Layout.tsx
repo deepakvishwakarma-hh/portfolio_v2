@@ -3,8 +3,9 @@ import { cursor } from "@/store/slices";
 import { useState, useEffect, useMemo } from 'react'
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import MenuControls from "./atoms/MenuControls";
-import SmoothScroll from "./Animation/SmoothScroll";
 import { AnimatePresence, motion, useAnimationControls } from 'framer-motion'
+
+import Locomotive from './LocomotiveLayout';
 
 const getRandomText = () => {
     function getDayName() {
@@ -108,13 +109,13 @@ const Layout = ({ children }: any) => {
 
     return (
         <>
-            {/* {!isMobile && (
+            {!isMobile && (
                 <motion.div
                     style={{ pointerEvents: 'none' }}
                     className="circle z-40 fixed rounded-full"
                     animate={_cursor == 'default' ? varients.def : varients.focused}>
                 </motion.div>
-            )} */}
+            )}
 
             {/* <AnimatePresence>
                 {isMenuVisible && <MobileMenu {...{ isMenuVisible, setMenuVisible }} />}
@@ -155,7 +156,9 @@ const Layout = ({ children }: any) => {
                         isMenuVisible,
                         setMenuVisible
                     }} />
-                    {children}
+                    <Locomotive>
+                        {children}
+                    </Locomotive>
                 </div>
 
             </AnimatePresence>
