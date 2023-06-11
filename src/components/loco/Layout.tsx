@@ -3,7 +3,7 @@ interface Props {
 }
 import { useRef } from "react"
 import { useRouter } from "next/router"
-import BackToTop from "./atoms/BackToTop";
+import BackToTop from "../atoms/BackToTop";
 import 'locomotive-scroll/dist/locomotive-scroll.css';
 import { LocomotiveScrollProvider as RLSProvider } from 'react-locomotive-scroll';
 

@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import { cursor } from "@/store/slices";
-import Locomotive from './LocomotiveLayout';
+import Locomotive from './loco/Layout';
 import MenuControls from "./atoms/MenuControls";
 import { useState, useEffect, useMemo } from 'react'
 import HorizontalLine from './atoms/HorizontalLines';
@@ -117,12 +117,12 @@ const Layout = ({ children }: any) => {
                 </motion.div>
             )}
 
-            {/* <AnimatePresence>
+            <AnimatePresence>
                 {isMenuVisible && <MobileMenu {...{ isMenuVisible, setMenuVisible }} />}
-            </AnimatePresence> */}
+            </AnimatePresence>
 
             <AnimatePresence>
-                {/* {AnimeState ? (
+                {AnimeState && (
                     <motion.div
                         exit={{ opacity: 0 }}
                         transition={{ duration: 1.5 }}
@@ -133,23 +133,13 @@ const Layout = ({ children }: any) => {
                                 animate={loadingTextAnimationControls}
                                 initial={{ opacity: 1 }}>
                                 <p className='4xl:text-h3-4xl 3xl:text-h3-3xl 2xl:text-h3-2xl xl:text-h3-xl lg:text-h3-lg md:text-h3-md text-h3-xs !font-bold dark:text-white text-black first-letter:capitalize
-                                '>random_text</p>
+                                '>{random_text}</p>
                             </motion.div>
                         </motion.div>
                     </motion.div>
-                ) : (
-                    <div className="w-full h-full absolute top-0 left-0 ">
-                        <MenuControls {...{
-                            handleDefault,
-                            handleFocused,
-                            isMenuVisible,
-                            setMenuVisible
-                        }} />
-                        {children}
-                    </div>)} */}
+                )}
 
                 <HorizontalLine />
-
 
                 <div className="w-full h-full absolute top-0 left-0 hidescrollbar">
                     <MenuControls {...{
