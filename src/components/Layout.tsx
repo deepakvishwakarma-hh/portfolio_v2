@@ -1,11 +1,11 @@
 import { useRouter } from 'next/router';
 import { cursor } from "@/store/slices";
-import { useState, useEffect, useMemo } from 'react'
-import { useAppDispatch, useAppSelector } from "@/store/hooks";
-import MenuControls from "./atoms/MenuControls";
-import { AnimatePresence, motion, useAnimationControls } from 'framer-motion'
-
 import Locomotive from './LocomotiveLayout';
+import MenuControls from "./atoms/MenuControls";
+import { useState, useEffect, useMemo } from 'react'
+import HorizontalLine from './atoms/HorizontalLines';
+import { useAppDispatch, useAppSelector } from "@/store/hooks";
+import { AnimatePresence, motion, useAnimationControls } from 'framer-motion'
 
 const getRandomText = () => {
     function getDayName() {
@@ -147,6 +147,8 @@ const Layout = ({ children }: any) => {
                         }} />
                         {children}
                     </div>)} */}
+
+                <HorizontalLine />
 
 
                 <div className="w-full h-full absolute top-0 left-0 hidescrollbar">
