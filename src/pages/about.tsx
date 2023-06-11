@@ -2,6 +2,7 @@ import TrackingText from '@/components/Animation/TextTracking'
 import TextRevealAnimation from '@/components/Animation/TextRevealAnimation'
 import data from '../projects.json'
 import LargeTextWithImages from '@/components/atoms/LargeTextWithImages'
+import Divider from '@/components/atoms/Divider'
 LargeTextWithImages
 export default function About() {
     return (
@@ -41,10 +42,16 @@ export default function About() {
                     </section>
 
 
+                    <Divider />
+
 
                     <section data-scroll-section>
 
-                        <section className='grid lg:grid-cols-[2fr_2fr] mt-[15rem] gap-5'>
+                        <section
+                            data-scroll
+                            data-scroll-speed="5"
+
+                            className='grid lg:grid-cols-[2fr_2fr] mt-[15rem] gap-5'>
                             <div>
                                 <h3 className="text-[70px] font-[800]">Top Skills</h3>
                                 <p className='text-lg mb-10'>View all skills on <TrackingText handleClick={() => { window.open("https://linkedin.com/in/sahejtuli") }} text='LinkedIn' className='inline !text-blue cursor-pointer' /> </p>
@@ -71,7 +78,10 @@ export default function About() {
 
                         </section>
 
-                        <section className='grid lg:grid-cols-[2fr_2fr] mt-[10rem] gap-5'>
+                        <section
+                            data-scroll
+                            data-scroll-speed="5"
+                            className='grid lg:grid-cols-[2fr_2fr] mt-[10rem] gap-5'>
                             <div>
                                 <h3 className="text-[70px] font-[800]">Education</h3>
                             </div>
@@ -82,7 +92,10 @@ export default function About() {
                             </div>
                         </section>
 
-                        <section className='grid lg:grid-cols-[2fr_2fr] mt-[10rem] gap-5'>
+                        <section
+                            data-scroll
+                            data-scroll-speed="5"
+                            className='grid lg:grid-cols-[2fr_2fr] mt-[10rem] gap-5'>
                             <div>
                                 <h3 className="text-[70px] font-[800]">Experience</h3>
                                 <p className='text-lg mb-10'>View all experience on <TrackingText handleClick={() => { window.open("https://linkedin.com/in/sahejtuli") }} text='LinkedIn' className='inline !text-blue cursor-pointer' /> </p>
@@ -94,7 +107,9 @@ export default function About() {
                             </div>
                         </section>
 
-                        <section className='grid lg:grid-cols-[2fr_2fr] mt-[10rem] gap-5'>
+                        <section
+                            data-scroll
+                            data-scroll-speed="5" className='grid lg:grid-cols-[2fr_2fr] mt-[10rem] gap-5'>
                             <div>
                                 <h3 className="text-[70px] font-[800]">Hobbies</h3>
                             </div>
@@ -108,7 +123,7 @@ export default function About() {
 
                     </section>
 
-
+                    <Divider />
 
                 </div>
 
