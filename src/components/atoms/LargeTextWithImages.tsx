@@ -63,9 +63,6 @@ const LargeTextWithImages: React.FC<Props> = ({
             <div className="lg:hidden block">{comp}</div>
             <p className='text-lg text-gray mb-[2rem]'>{discription}</p>
             <img src={first_image_url} width="60%" className="ml-auto" alt="project-image" />
-            {/* <Parallax offset={100} className="-mt-[7rem] mb-[5rem]" > */}
-
-
             <div
                 data-scroll
                 data-scroll-speed="2"
@@ -75,7 +72,6 @@ const LargeTextWithImages: React.FC<Props> = ({
 
             </div>
 
-            {/* </Parallax> */}
         </motion.div >
     )
 }

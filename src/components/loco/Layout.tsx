@@ -8,7 +8,8 @@ import 'locomotive-scroll/dist/locomotive-scroll.css';
 import { LocomotiveScrollProvider as RLSProvider } from 'react-locomotive-scroll';
 
 const Locomotive: React.FC<Props> = ({ children }) => {
-    const { asPath } = useRouter()
+    const router = useRouter()
+    const { asPath } = router
     const containerRef = useRef(null)
     return (
         <RLSProvider
@@ -25,7 +26,7 @@ const Locomotive: React.FC<Props> = ({ children }) => {
             containerRef={containerRef}>
             <div data-scroll-container className="4xl:px-[300px] 3xl:px-[250px] 2xl:px-[200px] xl:px-[176px] lg:px-[176px] md:px-[48px] px-[24px]" ref={containerRef}>
                 {children}
-                <BackToTop />
+                {router.pathname !== '/projects/[name]' && <BackToTop />}
             </div>
         </RLSProvider>
     )

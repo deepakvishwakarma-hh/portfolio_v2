@@ -10,10 +10,11 @@ import { cursor } from "@/store/slices"
 import { useRouter } from 'next/router'
 import { useAppDispatch } from "@/store/hooks"
 import { motion, useAnimationControls } from "framer-motion"
+import Section from '../loco/section'
 
 const ProjectFooter: React.FC<props> = ({ next, previous }) => {
     return (
-        <footer>
+        <Section>
             <section className='flex flex-col md:flex-row'>
                 {previous && <Previous {...previous} />}
                 {next && <Next {...next} />}
@@ -24,7 +25,7 @@ const ProjectFooter: React.FC<props> = ({ next, previous }) => {
                 <p className='text-md text-gray'>Made with ❤️ in San Francisco, CA</p>
             </section>
 
-        </footer>)
+        </Section>)
 }
 
 // Sub Components;

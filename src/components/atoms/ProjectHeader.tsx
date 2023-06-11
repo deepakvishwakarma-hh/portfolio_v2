@@ -2,26 +2,19 @@ interface props {
     name: string,
     index: string
 }
-import { motion } from 'framer-motion'
-import Parallax from "@/components/Animation/Parallax"
-import TextRevealAnimation from '../Animation/TextRevealAnimation'
+import Section from '../loco/section';
+import { motion } from 'framer-motion';
+import TextRevealAnimation from '../Animation/TextRevealAnimation';
+
 const Header: React.FC<props> = ({ name, index }) => {
     return (
-        <header className="relative">
+        <Section className="relative">
             <div className="h-screen w-full">
                 <div className=" flex items-center font-bold  justify-center h-full text-[#E5E5E5] dark:text-[#626262]">
-
-                    <motion.div className='overflow-y-hidden flex items-center  h-[40rem]'>
-                        <Parallax className="
-
-                               4xl:mt-[5rem]  
-                               3xl:mt-[5rem] 
-                               2xl:mt-[3rem] 
-                               xl:mt-[3rem] 
-                               lg:mt-[1rem] 
-                        
-                        
-                        " offset={200}>
+                    <motion.div className='overflow-y-hidden flex items-center h-[40rem]'>
+                        <div
+                            data-scroll
+                            data-scroll-speed="1">
                             <motion.div
                                 animate={{ y: "0%", opacity: 1 }}
                                 initial={{ y: "100%", opacity: 0 }}
@@ -39,9 +32,8 @@ const Header: React.FC<props> = ({ name, index }) => {
                                 md:text-[20rem] 
                                 text-[15rem] font-[800]">{index}</h1>
                             </motion.div>
-                        </Parallax>
+                        </div>
                     </motion.div>
-
                 </div>
             </div>
             <div className="h-screen w-full absolute top-0">
@@ -49,7 +41,7 @@ const Header: React.FC<props> = ({ name, index }) => {
                     <TextRevealAnimation delay={.5} lines={[name]} />
                 </div>
             </div>
-        </header>
+        </Section>
     )
 }
 export default Header
