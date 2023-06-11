@@ -1,6 +1,6 @@
 const Divider = () => {
     return (
-        <div className="w-full h-[1px] mt-[15rem]  dark:bg-white bg-black " data-scroll-section></div>
+        <div className="w-full h-[1px] pt-[15rem]  dark:bg-white bg-black" data-scroll></div>
     )
 }
 export default Divider 

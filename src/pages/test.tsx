@@ -6,19 +6,6 @@ export default function Text() {
 
             className="border-2 border-purple-500">
             <div className="main">
-
-
-
-
-
-
-
-
-
-
-
-
-
                 <section
 
                     data-scroll-section >

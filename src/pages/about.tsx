@@ -2,8 +2,8 @@ import TrackingText from '@/components/Animation/TextTracking'
 import TextRevealAnimation from '@/components/Animation/TextRevealAnimation'
 import data from '../projects.json'
 import LargeTextWithImages from '@/components/atoms/LargeTextWithImages'
-import Divider from '@/components/atoms/Divider'
 LargeTextWithImages
+import LocomotiveDivider from '@/components/atoms/LocomotiveDivider'
 export default function About() {
     return (
         <>
@@ -11,14 +11,14 @@ export default function About() {
                 <div className="main">
                     <section data-scroll-section>
                         <TextRevealAnimation
-                            classNames='lg:mt-[10rem] mt-[5rem]'
+                            classNames='lg:pt-[10rem] pt-[5rem]'
                             lines={[
                                 'Welcome, you',
                                 'beautiful',
                                 "hooman! Here's",
                                 'my story...']} />
 
-                        <section className='lg:mt-[200px] mt-[5rem] lg:w-[50%] ml-auto mb-[5rem]'>
+                        <section className='lg:pt-[200px] pt-[5rem] lg:w-[50%] ml-auto pb-[5rem]'>
                             <p className='text-lg'>
                                 Hello there! My name is Sahej, and I am delighted to have the chance to share my journey with you.
                                 <br />
@@ -39,15 +39,14 @@ export default function About() {
                         </section>
                     </section>
 
-
-
+                    <LocomotiveDivider />
 
                     <section data-scroll-section>
                         <section
                             data-scroll
                             data-scroll-speed="5"
 
-                            className='grid lg:grid-cols-[2fr_2fr] mt-[15rem] gap-5'>
+                            className='grid lg:grid-cols-[2fr_2fr] pt-[15rem] gap-5'>
                             <div>
                                 <h3 className="text-[70px] font-[800]">Top Skills</h3>
                                 <p className='text-lg mb-10'>View all skills on <TrackingText handleClick={() => { window.open("https://linkedin.com/in/sahejtuli") }} text='LinkedIn' className='inline !text-blue cursor-pointer' /> </p>
@@ -77,7 +76,7 @@ export default function About() {
                         <section
                             data-scroll
                             data-scroll-speed="5"
-                            className='grid lg:grid-cols-[2fr_2fr] mt-[10rem] gap-5'>
+                            className='grid lg:grid-cols-[2fr_2fr] pt-[10rem] gap-5'>
                             <div>
                                 <h3 className="text-[70px] font-[800]">Education</h3>
                             </div>
@@ -91,7 +90,7 @@ export default function About() {
                         <section
                             data-scroll
                             data-scroll-speed="5"
-                            className='grid lg:grid-cols-[2fr_2fr] mt-[10rem] gap-5'>
+                            className='grid lg:grid-cols-[2fr_2fr] pt-[10rem] gap-5'>
                             <div>
                                 <h3 className="text-[70px] font-[800]">Experience</h3>
                                 <p className='text-lg mb-10'>View all experience on <TrackingText handleClick={() => { window.open("https://linkedin.com/in/sahejtuli") }} text='LinkedIn' className='inline !text-blue cursor-pointer' /> </p>
@@ -105,7 +104,7 @@ export default function About() {
 
                         <section
                             data-scroll
-                            data-scroll-speed="5" className='grid lg:grid-cols-[2fr_2fr] mt-[10rem] gap-5'>
+                            data-scroll-speed="5" className='grid lg:grid-cols-[2fr_2fr] pt-[10rem] gap-5'>
                             <div>
                                 <h3 className="text-[70px] font-[800]">Hobbies</h3>
                             </div>
@@ -118,6 +117,9 @@ export default function About() {
                         </section>
 
                     </section>
+
+                    <LocomotiveDivider />
+
 
 
                 </div>
