@@ -116,9 +116,7 @@ const Layout = ({ children }: any) => {
                     </>
                 )}
 
-
-
-            </div >
+            </div>
         </>
     )
 }

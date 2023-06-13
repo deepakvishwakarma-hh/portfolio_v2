@@ -45,7 +45,7 @@ export default function About() {
 
                     className='grid lg:grid-cols-[2fr_2fr] pt-[15rem] gap-5'>
                     <div>
-                        <h3 className="text-[70px] font-[800]">Top Skills</h3>
+                        <h3 className=" md:text-[70px] text-[50px] font-[800]">Top Skills</h3>
                         <p className='text-lg mb-10'>View all skills on <TrackingText handleClick={() => { window.open("https://linkedin.com/in/sahejtuli") }} text='LinkedIn' className='inline !text-blue cursor-pointer' /> </p>
 
                     </div>
@@ -75,7 +75,7 @@ export default function About() {
                     data-scroll-speed="5"
                     className='grid lg:grid-cols-[2fr_2fr] pt-[10rem] gap-5'>
                     <div>
-                        <h3 className="text-[70px] font-[800]">Education</h3>
+                        <h3 className="md:text-[70px] text-[50px] font-[800]">Education</h3>
                     </div>
                     <div>
                         <p className='text-lg mb-10'>I am pursuing a Bachelor's degree in Computer Science at <br></br><TrackingText handleClick={() => { window.open("https://sfsu.edu") }} text='San Francisco State University' className='inline !text-blue cursor-pointer' />. I am expected to graduate in Spring 2024.</p>
@@ -89,7 +89,7 @@ export default function About() {
                     data-scroll-speed="5"
                     className='grid lg:grid-cols-[2fr_2fr] pt-[10rem] gap-5'>
                     <div>
-                        <h3 className="text-[70px] font-[800]">Experience</h3>
+                        <h3 className="md:text-[70px] text-[50px] font-[800]">Experience</h3>
                         <p className='text-lg mb-10'>View all experience on <TrackingText handleClick={() => { window.open("https://linkedin.com/in/sahejtuli") }} text='LinkedIn' className='inline !text-blue cursor-pointer' /> </p>
 
                     </div>
@@ -103,7 +103,7 @@ export default function About() {
                     data-scroll
                     data-scroll-speed="5" className='grid lg:grid-cols-[2fr_2fr] pt-[10rem] gap-5'>
                     <div>
-                        <h3 className="text-[70px] font-[800]">Hobbies</h3>
+                        <h3 className="md:text-[70px] text-[50px] font-[800]">Hobbies</h3>
                     </div>
                     <div>
                         <p className='text-lg mb-10'>My hobbies include photography and cooking. I find joy in capturing moments through the lens, exploring different perspectives, and documenting the beauty of the world around me. </p>
