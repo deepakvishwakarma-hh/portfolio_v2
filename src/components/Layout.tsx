@@ -7,6 +7,8 @@ import HorizontalLine from './atoms/HorizontalLines';
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import { AnimatePresence, motion, useAnimationControls } from 'framer-motion'
 
+import Cursor from './Cursor';
+
 const getRandomText = () => {
     function getDayName() {
         const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -66,95 +68,59 @@ const Layout = ({ children }: any) => {
 
     // Cursor Followv Animation
 
-    const _cursor = useAppSelector(store => store.deafult.cursorState)
-    const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-
-    const varients = {
-        focused: {
-            zIndex: 1,
-            width: '60px',
-            height: '60px',
-            top: mousePos.y + -30,
-            left: mousePos.x + -30,
-            background: '#4b6dc14d',
-            transition: {
-                duration: 1,
-                ease: [0.16, 1, 0.3, 1]
-            }
-        },
-        def: {
-            zIndex: 1,
-            width: '15px',
-            height: '15px',
-            top: mousePos.y + -7.5,
-            left: mousePos.x + -7.5,
-            background: '#4b6cc1',
-            transition: {
-                duration: 1,
-                ease: [0.16, 1, 0.3, 1]
-            }
-        }
-    }
-
-
-    const handleMouseMove = (event: any) => {
-        setMousePos({ x: event.clientX, y: event.clientY });
-    };
-    useEffect(() => {
-        document.addEventListener('mousemove', handleMouseMove);
-        return () => {
-            document.removeEventListener('mousemove', handleMouseMove);
-        };
-    }, []);
 
     return (
         <>
-            {!isMobile && (
-                <motion.div
-                    style={{ pointerEvents: 'none' }}
-                    className="circle z-40 fixed rounded-full"
-                    animate={_cursor == 'default' ? varients.def : varients.focused}>
-                </motion.div>
-            )}
 
             <AnimatePresence>
                 {isMenuVisible && <MobileMenu {...{ isMenuVisible, setMenuVisible }} />}
             </AnimatePresence>
 
-            <AnimatePresence>
-                {AnimeState && (
+
+
+            <div className="w-full h-full absolute top-0 left-0 hidescrollbar">
+                <Cursor />
+                <MenuControls {...{
+                    handleDefault,
+                    handleFocused,
+                    isMenuVisible,
+                    setMenuVisible
+                }} />
+                <AnimatePresence mode='wait'>
                     <motion.div
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 1.5 }}
-                        className="fixed z-50 top-0 left-0 w-full h-full bg-white dark:bg-black flex items-center justify-center">
-                        <motion.div className='overflow-y-hidden'>
+                        key={router.route}
+                        initial="initial"
+                        animate="animate"
+                        exit="exit"
+                        variants={{
+                            initial: { opacity: 0 },
+                            animate: { opacity: 1 },
+                            exit: { opacity: 0 },
+                        }}>
+                        {AnimeState ? (
                             <motion.div
-                                style={{ y: "100%", opacity: 0 }}
-                                animate={loadingTextAnimationControls}
-                                initial={{ opacity: 1 }}>
-                                <p className='4xl:text-h3-4xl 3xl:text-h3-3xl 2xl:text-h3-2xl xl:text-h3-xl lg:text-h3-lg md:text-h3-md text-h3-xs !font-bold dark:text-white text-black first-letter:capitalize
+                                exit={{ opacity: 0 }}
+                                transition={{ duration: 1.5 }}
+                                className="fixed z-50 top-0 left-0 w-full h-full bg-white dark:bg-black flex items-center justify-center">
+                                <motion.div className='overflow-y-hidden'>
+                                    <motion.div
+                                        style={{ y: "100%", opacity: 0 }}
+                                        animate={loadingTextAnimationControls}
+                                        initial={{ opacity: 1 }}>
+                                        <p className='4xl:text-h3-4xl 3xl:text-h3-3xl 2xl:text-h3-2xl xl:text-h3-xl lg:text-h3-lg md:text-h3-md text-h3-xs !font-bold dark:text-white text-black first-letter:capitalize
                                 '>{random_text}</p>
+                                    </motion.div>
+                                </motion.div>
                             </motion.div>
-                        </motion.div>
+                        ) : (
+                            <Locomotive>
+                                {children}
+                            </Locomotive>
+                        )}
+
                     </motion.div>
-                )}
-
-                <HorizontalLine />
-
-                <div className="w-full h-full absolute top-0 left-0 hidescrollbar">
-                    <MenuControls {...{
-                        handleDefault,
-                        handleFocused,
-                        isMenuVisible,
-                        setMenuVisible
-                    }} />
-                    <Locomotive>
-                        {children}
-                    </Locomotive>
-                </div>
-
-            </AnimatePresence>
-
+                </AnimatePresence>
+            </div>
         </>
     )
 }
