@@ -79,12 +79,9 @@ const Layout = ({ children }: any) => {
             </AnimatePresence>
 
             <div
-
                 style={isMobile ? {
                     'overflow': 'scroll'
                 } : undefined}
-
-
                 className="w-full h-full fixed top-0 left-0 hidescrollbar">
 
                 {AnimeState ? (

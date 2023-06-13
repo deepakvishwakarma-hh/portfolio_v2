@@ -1,14 +1,10 @@
 import store from '../store'
 import '@/styles/globals.css'
 import { Provider } from 'react-redux'
-// import type { AppProps } from 'next/app'
 import Layout from '@/components/Layout'
 import { ThemeProvider } from 'next-themes'
 import { PageTransition } from 'next-page-transitions'
-
-
 const TIMEOUT = 400
-
 export default function App({ Component, pageProps }) {
   return (
     <ThemeProvider defaultTheme='dark' attribute="class" >

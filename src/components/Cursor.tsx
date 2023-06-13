@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react';
-import { useAppSelector, useAppDispatch } from '@/store/hooks';
+import { useAppSelector } from '@/store/hooks';
 const Cursor = () => {
 
     const _cursor = useAppSelector(store => store.deafult.cursorState)
