@@ -1,19 +1,18 @@
 interface Props {
     children: any;
 }
-import { useRouter } from "next/router"
-import { useRef, useEffect } from "react"
-import BackToTop from "../atoms/BackToTop";
-import 'locomotive-scroll/dist/locomotive-scroll.css';
-import { LocomotiveScrollProvider as RLSProvider } from 'react-locomotive-scroll';
+import { useRef } from "react"
 import Cursor from "../Cursor";
+import { useRouter } from "next/router"
+import BackToTop from "../atoms/BackToTop";
+import { LocomotiveScrollProvider as RLSProvider } from 'react-locomotive-scroll';
 import useMobileDetect from "@/hooks/useMobileDetect";
 
 const Locomotive: React.FC<Props> = ({ children }) => {
     const router = useRouter()
     const { asPath } = router
     const containerRef = useRef(null)
-    const isMobile = useMobileDetect
+    const isMobile = useMobileDetect()
     return (
         <RLSProvider
             options={{

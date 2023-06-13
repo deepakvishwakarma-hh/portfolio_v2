@@ -23,10 +23,6 @@ const getRandomText = () => {
 }
 
 const Layout = ({ children }: any) => {
-
-    const router = useRouter();
-
-
     const dispatch = useAppDispatch()
     const isMobile = useMobileDetect()
     const [AnimeState, setAnimeState] = useState(true)
@@ -66,58 +62,48 @@ const Layout = ({ children }: any) => {
         };
     }, []);
 
-
-
-    // Cursor Followv Animation
-
-
     return (
-        <>
+        <div
+            style={isMobile ? {
+                'overflow': 'scroll'
+            } : undefined}
+            className="w-full h-full fixed top-0 left-0 hidescrollbar">
 
-            <AnimatePresence>
-                {isMenuVisible && <MobileMenu {...{ isMenuVisible, setMenuVisible }} />}
-            </AnimatePresence>
-
-            <div
-                style={isMobile ? {
-                    'overflow': 'scroll'
-                } : undefined}
-                className="w-full h-full fixed top-0 left-0 hidescrollbar">
-
-                {AnimeState ? (
-                    <motion.div
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 1.5 }}
-                        className="fixed z-50 top-0 left-0 w-full h-full bg-white dark:bg-black flex items-center justify-center">
-                        <motion.div className='overflow-y-hidden'>
-                            <motion.div
-                                style={{ y: "100%", opacity: 0 }}
-                                animate={loadingTextAnimationControls}
-                                initial={{ opacity: 1 }}>
-                                <p className='4xl:text-h3-4xl 3xl:text-h3-3xl 2xl:text-h3-2xl xl:text-h3-xl lg:text-h3-lg md:text-h3-md text-h3-xs !font-bold dark:text-white text-black first-letter:capitalize
+            {AnimeState ? (
+                <motion.div
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 1.5 }}
+                    className="fixed z-50 top-0 left-0 w-full h-full bg-white dark:bg-black flex items-center justify-center">
+                    <motion.div className='overflow-y-hidden'>
+                        <motion.div
+                            style={{ y: "100%", opacity: 0 }}
+                            animate={loadingTextAnimationControls}
+                            initial={{ opacity: 1 }}>
+                            <p className='4xl:text-h3-4xl 3xl:text-h3-3xl 2xl:text-h3-2xl xl:text-h3-xl lg:text-h3-lg md:text-h3-md text-h3-xs !font-bold dark:text-white text-black first-letter:capitalize
                                 '>{random_text}</p>
-                            </motion.div>
                         </motion.div>
                     </motion.div>
-                ) : (
+                </motion.div>
+            ) : (
 
-                    <>
-                        <MenuControls {...{
-                            handleDefault,
-                            handleFocused,
-                            isMenuVisible,
-                            setMenuVisible
-                        }} />
-                        <HorizontalLine />
-                        <Locomotive>
-                            {children}
-                        </Locomotive>
+                <>
+                    <MenuControls {...{
+                        handleDefault,
+                        handleFocused,
+                        isMenuVisible,
+                        setMenuVisible
+                    }} />
+                    <AnimatePresence>
+                        {isMenuVisible && <MobileMenu {...{ isMenuVisible, setMenuVisible }} />}
+                    </AnimatePresence>
+                    <HorizontalLine />
+                    <Locomotive>
+                        {children}
+                    </Locomotive>
 
-                    </>
-                )}
-
-            </div>
-        </>
+                </>
+            )}
+        </div>
     )
 }
 export default Layout
@@ -146,8 +132,8 @@ const MobileMenu = ({ isMenuVisible, setMenuVisible }: any) => {
                     delay: 2
                 }
             }}
-            className="bg-[#ececec] dark:bg-black w-full fixed lg:z-0 z-50 top-0 left-0  lg:hidden block">
-            <motion.div className='md:mt-[15rem] mt-[5rem]  p-[24px] 4xl:p-[50px] 3xl:p-[50px] 2xl:p-[50px] xl:p-[25px] pt-[6rem]'>
+            className="bg-[#ececec] dark:bg-[#1a1a1a] w-full fixed lg:z-0 z-50 top-0 left-0  lg:hidden block">
+            <motion.div className='md:mt-[15rem] mt-[5rem] p-[24px] 4xl:p-[50px] 3xl:p-[50px] 2xl:p-[50px] xl:p-[25px] pt-[6rem]'>
 
                 <motion.div
                     style={{ height: 1, width: '0%' }}
