@@ -72,7 +72,7 @@ const MobileMenuToggleButton = ({ isMenuVisible, setMenuVisible }: any) => {
         console.log('hey')
     }
     return (
-        <div className='lg:hidden justify-end flex  '>
+        <div className='lg:hidden justify-end flex pointer-events-auto'>
             <button
                 className='p-5 pr-0'
                 onClick={handleClick}>

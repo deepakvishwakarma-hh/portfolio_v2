@@ -77,14 +77,16 @@ const Layout = ({ children }: any) => {
             <AnimatePresence>
                 {isMenuVisible && <MobileMenu {...{ isMenuVisible, setMenuVisible }} />}
             </AnimatePresence>
-            <div className="w-full h-full absolute top-0 left-0 hidescrollbar">
-                <MenuControls {...{
-                    handleDefault,
-                    handleFocused,
-                    isMenuVisible,
-                    setMenuVisible
-                }} />
-                <HorizontalLine />
+
+            <div
+
+                style={isMobile ? {
+                    'overflow': 'scroll'
+                } : undefined}
+
+
+                className="w-full h-full fixed top-0 left-0 hidescrollbar">
+
                 {AnimeState ? (
                     <motion.div
                         exit={{ opacity: 0 }}
@@ -101,11 +103,25 @@ const Layout = ({ children }: any) => {
                         </motion.div>
                     </motion.div>
                 ) : (
-                    <Locomotive>
-                        {children}
-                    </Locomotive>
+
+                    <>
+                        <MenuControls {...{
+                            handleDefault,
+                            handleFocused,
+                            isMenuVisible,
+                            setMenuVisible
+                        }} />
+                        <HorizontalLine />
+                        <Locomotive>
+                            {children}
+                        </Locomotive>
+
+                    </>
                 )}
-            </div>
+
+
+
+            </div >
         </>
     )
 }
