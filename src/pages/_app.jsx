@@ -17,7 +17,6 @@ export default function App({ Component, pageProps }) {
           <PageTransition
             timeout={TIMEOUT}
             classNames="page-transition"
-            // loadingComponent={<Loader />}
             loadingDelay={500}
             loadingTimeout={{
               enter: TIMEOUT,

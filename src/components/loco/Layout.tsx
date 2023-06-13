@@ -24,6 +24,13 @@ const Locomotive: React.FC<Props> = ({ children }) => {
             }
             location={asPath}
             containerRef={containerRef}
+            onLocationChange={(scroll: any) => {
+
+                setTimeout(() => {
+                    scroll.scrollTo(0, { duration: 1, disableLerp: true })
+                }, 500)
+
+            }}
 
         >
             <div data-scroll-container className="4xl:px-[300px] 3xl:px-[250px] 2xl:px-[200px] xl:px-[176px] lg:px-[176px] md:px-[48px] px-[24px]" ref={containerRef}>
