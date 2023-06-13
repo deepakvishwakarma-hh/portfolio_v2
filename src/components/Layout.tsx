@@ -74,12 +74,9 @@ const Layout = ({ children }: any) => {
     return (
         <>
 
-            {/* <AnimatePresence>
+            <AnimatePresence>
                 {isMenuVisible && <MobileMenu {...{ isMenuVisible, setMenuVisible }} />}
-            </AnimatePresence> */}
-
-
-
+            </AnimatePresence>
             <div className="w-full h-full absolute top-0 left-0 hidescrollbar">
                 <MenuControls {...{
                     handleDefault,
@@ -87,40 +84,26 @@ const Layout = ({ children }: any) => {
                     isMenuVisible,
                     setMenuVisible
                 }} />
-                <AnimatePresence mode='wait' initial={false}>
+                {AnimeState ? (
                     <motion.div
-                        key={router.asPath}
-                        initial="initial"
-                        animate="animate"
-                        exit="exit"
-                        variants={{
-                            initial: { opacity: 0 },
-                            animate: { opacity: 1 },
-                            exit: { opacity: 0 },
-                        }}>
-                        {AnimeState ? (
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 1.5 }}
+                        className="fixed z-50 top-0 left-0 w-full h-full bg-white dark:bg-black flex items-center justify-center">
+                        <motion.div className='overflow-y-hidden'>
                             <motion.div
-                                exit={{ opacity: 0 }}
-                                transition={{ duration: 1.5 }}
-                                className="fixed z-50 top-0 left-0 w-full h-full bg-white dark:bg-black flex items-center justify-center">
-                                <motion.div className='overflow-y-hidden'>
-                                    <motion.div
-                                        style={{ y: "100%", opacity: 0 }}
-                                        animate={loadingTextAnimationControls}
-                                        initial={{ opacity: 1 }}>
-                                        <p className='4xl:text-h3-4xl 3xl:text-h3-3xl 2xl:text-h3-2xl xl:text-h3-xl lg:text-h3-lg md:text-h3-md text-h3-xs !font-bold dark:text-white text-black first-letter:capitalize
+                                style={{ y: "100%", opacity: 0 }}
+                                animate={loadingTextAnimationControls}
+                                initial={{ opacity: 1 }}>
+                                <p className='4xl:text-h3-4xl 3xl:text-h3-3xl 2xl:text-h3-2xl xl:text-h3-xl lg:text-h3-lg md:text-h3-md text-h3-xs !font-bold dark:text-white text-black first-letter:capitalize
                                 '>{random_text}</p>
-                                    </motion.div>
-                                </motion.div>
                             </motion.div>
-                        ) : (
-                            <Locomotive>
-                                {children}
-                            </Locomotive>
-                        )}
-
+                        </motion.div>
                     </motion.div>
-                </AnimatePresence>
+                ) : (
+                    <Locomotive>
+                        {children}
+                    </Locomotive>
+                )}
             </div>
         </>
     )

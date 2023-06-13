@@ -31,7 +31,8 @@
     "src/pages/index.jsx",
     "src/pages/test.tsx",
     "src/components/Cursor.jsx",
-    "src/components/Animation/NewParallex.jsx"
+    "src/components/Animation/NewParallex.jsx",
+    "src/pages/_app.jsx"
   ],
   "exclude": [
     "node_modules"
