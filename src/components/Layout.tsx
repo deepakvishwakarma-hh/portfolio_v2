@@ -74,9 +74,9 @@ const Layout = ({ children }: any) => {
     return (
         <>
 
-            <AnimatePresence>
+            {/* <AnimatePresence>
                 {isMenuVisible && <MobileMenu {...{ isMenuVisible, setMenuVisible }} />}
-            </AnimatePresence>
+            </AnimatePresence> */}
 
 
 
@@ -87,7 +87,7 @@ const Layout = ({ children }: any) => {
                     isMenuVisible,
                     setMenuVisible
                 }} />
-                <AnimatePresence mode='wait'>
+                <AnimatePresence mode='wait' initial={false}>
                     <motion.div
                         key={router.asPath}
                         initial="initial"
