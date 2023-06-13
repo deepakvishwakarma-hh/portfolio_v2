@@ -3,7 +3,6 @@ interface props {
     previous: project['previous'],
 }
 
-
 import React from 'react'
 import { project } from '@/type'
 import { cursor } from "@/store/slices"
@@ -69,39 +68,10 @@ const Next = ({ name, href }: { name: string, href: string }) => {
             <motion.div
                 className='flex relative'>
                 <motion.h3
-                    className={`tracking-wider  
-                    
-                    4xl:text-h2-4xl
-                        3xl:text-h2-3xl
-                        2xl:text-h2-2xl
-                        xl:text-h2-xl
-                        lg:text-h2-lg
-                        md:text-h2-md
-                        text-h2-sm
-
-
-                        
-            
-                        !font-extrabol
-                    
-                    `}
+                    className={`tracking-wider 4xl:text-h2-4xl 3xl:text-h2-3xl 2xl:text-h2-2xl xl:text-h2-xl lg:text-h2-lg md:text-h2-md text-h2-sm !font-extrabol`}
                     animate={simpleTextControl}>Next</motion.h3>
                 <motion.h3
-                    className={`absolute outline-text  tracking-wider 
-                    
-                    4xl:text-h2-4xl
-                        3xl:text-h2-3xl
-                        2xl:text-h2-2xl
-                        xl:text-h2-xl
-                        lg:text-h2-lg
-                        md:text-h2-md
-                        text-h2-sm
-
-
-
-                        !font-extrabold
-                    
-                    `}
+                    className={`absolute outline-text tracking-wider 4xl:text-h2-4xl 3xl:text-h2-3xl 2xl:text-h2-2xl xl:text-h2-xl lg:text-h2-lg md:text-h2-md text-h2-sm !font-extrabold`}
                     animate={OutlineTextControl}>Next</motion.h3>
             </motion.div>
 
@@ -147,45 +117,16 @@ const Previous = ({ name, href }: { name: string, href: string }) => {
     }
     return (
         <div
-            className='cursor-pointer flex-1'
             onClick={handleClick}
+            className='cursor-pointer flex-1'
             onMouseEnter={handleInnerMouseEnter}
             onMouseLeave={handleInnerMouseLeave}>
-            <motion.div
-                className='flex  relative'
-            >
+            <motion.div className='flex relative'>
                 <motion.h3
-                    className={`tracking-wider  
-                    
-                    4xl:text-h2-4xl
-                        3xl:text-h2-3xl
-                        2xl:text-h2-2xl
-                        xl:text-h2-xl
-                        lg:text-h2-lg
-                        md:text-h2-md
-                        text-h2-sm
-
-                        !font-extrabold
-                    
-                    `}
+                    className={`tracking-wider 4xl:text-h2-4xl 3xl:text-h2-3xl 2xl:text-h2-2xl xl:text-h2-xl lg:text-h2-lg md:text-h2-md text-h2-sm !font-extrabold`}
                     animate={simpleTextControl}>Previous</motion.h3>
                 <motion.h3
-                    className={`absolute outline-text  tracking-wider 
-                    
-                    4xl:text-h2-4xl
-                        3xl:text-h2-3xl
-                        2xl:text-h2-2xl
-                        xl:text-h2-xl
-                        lg:text-h2-lg
-                        md:text-h2-md
-                        text-h2-sm
-
-
-                        
-            
-                        !font-extrabold
-                    
-                    `}
+                    className={`absolute outline-text tracking-wider 4xl:text-h2-4xl 3xl:text-h2-3xl 2xl:text-h2-2xl xl:text-h2-xl lg:text-h2-lg md:text-h2-md text-h2-sm !font-extrabold`}
                     animate={OutlineTextControl}>Previous</motion.h3>
             </motion.div>
 

@@ -1,5 +1,3 @@
-// upgrade needed : props_names, basic performs
-
 interface Props {
     heading: string,
     href: string,
@@ -9,7 +7,6 @@ interface Props {
 }
 import { cursor } from "@/store/slices"
 import { useRouter } from "next/router"
-import Parallax from "../Animation/Parallax"
 import { useAppDispatch } from "@/store/hooks"
 import { motion, useAnimationControls } from 'framer-motion'
 
@@ -66,10 +63,8 @@ const LargeTextWithImages: React.FC<Props> = ({
             <div
                 data-scroll
                 data-scroll-speed="2"
-                className="-mt-[6rem] mb-[5rem]"
-            >
+                className="-mt-[6rem] mb-[5rem]">
                 <img src={second_image_url} width="60%" className="" alt="poject-image" />
-
             </div>
 
         </motion.div >

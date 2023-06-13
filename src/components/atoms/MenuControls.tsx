@@ -22,10 +22,10 @@ const MenuControls = ({ handleDefault, handleFocused, isMenuVisible, setMenuVisi
                 <div>
                     <motion.h5
                         onClick={handleClick}
-                        style={theme === 'light' ? { color: 'black' } : { color: 'white' }}
-                        className="cursor-pointer text-md text-black dark:text-white  pointer-events-auto"
                         onHoverEnd={handleDefault}
                         onHoverStart={handleFocused}
+                        style={theme === 'light' ? { color: 'black' } : { color: 'white' }}
+                        className="cursor-pointer text-md text-black dark:text-white  pointer-events-auto"
                         whileHover={hover_tracking_and_bold}>Sahej Tuli's <br /> Portfolio</motion.h5>
                 </div>
 
@@ -41,10 +41,10 @@ const MenuControls = ({ handleDefault, handleFocused, isMenuVisible, setMenuVisi
                 <div className="hidden lg:flex items-end justify-end w-full h-full">
                     <Link href={'/'}>
                         <motion.h5
-                            onClick={() => { window.location.href = "mailto:someone @example.com" }}
                             onHoverEnd={handleDefault}
                             onHoverStart={handleFocused}
-                            className=" cursor-pointer text-md hidden lg:block pointer-events-auto "
+                            onClick={() => { window.location.href = "mailto:someone @example.com" }}
+                            className=" cursor-pointer text-md hidden lg:block pointer-events-auto"
                             whileHover={{ letterSpacing: '3px', color: '#4b6cc1', fontWeight: "bold" }}>Available for work!</motion.h5>
                     </Link>
                 </div>

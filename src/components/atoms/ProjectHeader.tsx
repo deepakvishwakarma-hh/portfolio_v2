@@ -23,14 +23,7 @@ const Header: React.FC<props> = ({ name, index }) => {
                                     ease: [0.87, 0, 0.13, 1],
                                     delay: 0,
                                 }}>
-                                <h1 className="relative 
-                                4xl:text-[40rem]  
-                                3xl:text-[32rem] 
-                                2xl:text-[32rem] 
-                                xl:text-[25rem] 
-                                lg:text-[25rem] 
-                                md:text-[20rem] 
-                                text-[15rem] font-[800]">{index}</h1>
+                                <h1 className="relative 4xl:text-[40rem]  3xl:text-[32rem] 2xl:text-[32rem] xl:text-[25rem] lg:text-[25rem] md:text-[20rem] text-[15rem] font-[800]">{index}</h1>
                             </motion.div>
                         </div>
                     </motion.div>

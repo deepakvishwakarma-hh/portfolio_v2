@@ -1,6 +1,6 @@
 import Section from '@/components/loco/section'
 import TrackingText from '@/components/Animation/TextTracking'
-import LocomotiveDivider from '@/components/atoms/LocomotiveDivider'
+import LocomotiveDivider from '@/components/loco/Divider'
 import TextRevealAnimation from '@/components/Animation/TextRevealAnimation'
 
 export default function About() {

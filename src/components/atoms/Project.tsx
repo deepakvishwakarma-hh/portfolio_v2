@@ -1,4 +1,3 @@
-
 interface Props {
     index: number,
     item: any
@@ -9,9 +8,6 @@ import { useRouter } from "next/router"
 import { cursor } from "@/store/slices"
 import { useAppDispatch } from "@/store/hooks"
 import { motion, AnimatePresence, useAnimationControls } from 'framer-motion'
-import Section from "../loco/section"
-
-
 
 const ProjectListItem: React.FC<Props> = ({ index, item }) => {
 
@@ -109,25 +105,12 @@ const ProjectListItem: React.FC<Props> = ({ index, item }) => {
                         initial="initial"
                         animate="animate"
                         transition={transitions.text}
-                        className={` 
-                        4xl:text-h3-4xl
-                        3xl:text-h3-3xl
-                        2xl:text-h3-2xl
-                        xl:text-h3-xl
-                        lg:text-h3-lg
-                        md:text-h3-md
-                        text-h3-sm
-
-
-
-                        !font-extrabold capitalize relative`}>
-
+                        className={`4xl:text-h3-4xl 3xl:text-h3-3xl 2xl:text-h3-2xl xl:text-h3-xl lg:text-h3-lg md:text-h3-md text-h3-sm !font-extrabold capitalize relative`}>
                         <motion.span animate={simpleTextControl} className="tracking-wider">{item.name}</motion.span>
                         <motion.span animate={OutlineTextControl} className="left-0 top-0 absolute outline-text  tracking-wider">{item.name}</motion.span>
 
                     </motion.h1>
                 </motion.div>
-
 
                 <AnimatePresence>
                     {visible && (
@@ -144,7 +127,6 @@ const ProjectListItem: React.FC<Props> = ({ index, item }) => {
                     )}
                 </AnimatePresence>
             </section>
-
         </motion.div>
     )
 }
