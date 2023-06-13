@@ -25,6 +25,8 @@ const getRandomText = () => {
 const Layout = ({ children }: any) => {
 
     const router = useRouter();
+
+
     const dispatch = useAppDispatch()
     const isMobile = useMobileDetect()
     const [AnimeState, setAnimeState] = useState(true)
@@ -79,7 +81,6 @@ const Layout = ({ children }: any) => {
 
 
             <div className="w-full h-full absolute top-0 left-0 hidescrollbar">
-                <Cursor />
                 <MenuControls {...{
                     handleDefault,
                     handleFocused,
@@ -88,7 +89,7 @@ const Layout = ({ children }: any) => {
                 }} />
                 <AnimatePresence mode='wait'>
                     <motion.div
-                        key={router.route}
+                        key={router.asPath}
                         initial="initial"
                         animate="animate"
                         exit="exit"
