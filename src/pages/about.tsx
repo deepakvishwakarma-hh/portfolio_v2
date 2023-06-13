@@ -7,13 +7,29 @@ export default function About() {
     return (
         <div className="main">
             <Section>
-                <TextRevealAnimation
-                    classNames='lg:pt-[10rem] pt-[5rem]'
-                    lines={[
-                        'Welcome, you',
-                        'beautiful',
-                        "hooman! Here's",
-                        'my story...']} />
+
+                <div className='hidden md:block'>
+                    <TextRevealAnimation
+                        classNames='lg:pt-[10rem] pt-[5rem]'
+                        lines={[
+                            'Welcome, you',
+                            'beautiful',
+                            "hooman! Here's",
+                            'my story...']} />
+                </div>
+
+                <div className='md:hidden block'>
+                    <TextRevealAnimation
+                        classNames='lg:pt-[10rem] pt-[5rem]'
+                        lines={[
+                            'Welcome,',
+                            'you',
+                            'beautiful',
+                            "hooman!",
+                            " Here's",
+                            'my story...']} />
+                </div>
+
 
                 <section className='lg:pt-[200px] pt-[5rem] lg:w-[50%] ml-auto pb-[5rem]'>
                     <p className='text-lg'>
