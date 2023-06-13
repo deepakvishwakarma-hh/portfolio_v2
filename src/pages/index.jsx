@@ -22,14 +22,29 @@ const Home = () => {
 
       <Section>
 
-        <TextRevealAnimation
-          classNames='lg:pt-[10rem] pt-[5rem]'
-          lines={[
-            "Hello! I'm",
-            'Sahej Tuli,',
-            'a San Francisco',
-            'based front-end',
-            'web developer.']} />
+        <div className='hidden md:block'>
+          <TextRevealAnimation
+            classNames='lg:pt-[10rem] pt-[5rem]'
+            lines={[
+              "Hello! I'm",
+              'Sahej Tuli,',
+              'a San Francisco',
+              'based front-end',
+              'web developer.']} />
+        </div>
+
+        <div className='md:hidden block'>
+          <TextRevealAnimation
+            classNames='lg:pt-[10rem] pt-[5rem]'
+            lines={[
+              "Hello! I'm",
+              'Sahej Tuli,',
+              'a San ',
+              'Francisco',
+              'based front',
+              '-end web',
+              'developer.']} />
+        </div>
 
         <section className='lg:pt-[300px] pt-[5rem]  lg:w-[50%] ml-auto pb-[5rem]'>
           <p className='lg:text-lg text-smd font-medium'>  I am a 21-year-old student currently pursuing a Bachelor's degree in Computer Science at San Francisco State University.
