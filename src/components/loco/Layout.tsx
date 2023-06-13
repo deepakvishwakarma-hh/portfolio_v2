@@ -7,11 +7,13 @@ import BackToTop from "../atoms/BackToTop";
 import 'locomotive-scroll/dist/locomotive-scroll.css';
 import { LocomotiveScrollProvider as RLSProvider } from 'react-locomotive-scroll';
 import Cursor from "../Cursor";
+import useMobileDetect from "@/hooks/useMobileDetect";
 
 const Locomotive: React.FC<Props> = ({ children }) => {
     const router = useRouter()
     const { asPath } = router
     const containerRef = useRef(null)
+    const isMobile = useMobileDetect
     return (
         <RLSProvider
             options={{
@@ -35,7 +37,7 @@ const Locomotive: React.FC<Props> = ({ children }) => {
 
         >
             <div data-scroll-container className="4xl:px-[300px] 3xl:px-[250px] 2xl:px-[200px] xl:px-[176px] lg:px-[176px] md:px-[48px] px-[24px]" ref={containerRef}>
-                <Cursor />
+                {!isMobile && <Cursor />}
                 {children}
                 {router.pathname !== '/projects/[name]' && <BackToTop />}
             </div>
