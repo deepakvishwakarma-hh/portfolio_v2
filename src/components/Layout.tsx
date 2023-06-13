@@ -84,6 +84,7 @@ const Layout = ({ children }: any) => {
                     isMenuVisible,
                     setMenuVisible
                 }} />
+                <HorizontalLine />
                 {AnimeState ? (
                     <motion.div
                         exit={{ opacity: 0 }}
