@@ -5,7 +5,6 @@ import OutlineText from '@/components/Animation/OutlineText'
 import TrackingText from '@/components/Animation/TextTracking'
 import LargeTextWithImages from '@/components/atoms/LargeTextWithImages'
 import TextRevealAnimation from '@/components/Animation/TextRevealAnimation'
-
 const Home = () => {
   const router = useRouter()
 
@@ -15,6 +14,9 @@ const Home = () => {
   const handleSeeAboutMe = () => {
     router.push('/about')
   }
+
+
+
   return (
     <div className="main">
 

@@ -25,7 +25,7 @@ export const MenuButton: React.FC<props> = ({ click, text, active }) => {
             onTouchStart={handleFocused}
             style={active ? hoverProp : {}}
             className="text-left text-md font-semibold capitalize w-max cursor-pointer text-black dark:text-white 
-            hover:tracking-[5px] hover:text-blue hover:text-bold transition-all duration-500"
+            hover:tracking-[5px] hover:text-blue hover:text-bold transition-all duration-500 pointer-events-auto"
         >{text}</motion.button>
     )
 }

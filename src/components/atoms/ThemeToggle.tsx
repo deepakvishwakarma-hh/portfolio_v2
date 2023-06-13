@@ -7,7 +7,6 @@ import { motion } from 'framer-motion'
 import { useTheme } from 'next-themes'
 import { cursor } from '@/store/slices'
 import { useAppDispatch } from '@/store/hooks'
-import { ReactReduxContext } from 'react-redux';
 
 const ThemeToggle = () => {
     const dispatch = useAppDispatch()
@@ -29,7 +28,7 @@ const ThemeToggle = () => {
         <div
             onMouseEnter={handleFocused}
             onMouseLeave={handleDefault}
-            className='lg:flex justify-end hidden'>
+            className='lg:flex justify-end hidden pointer-events-auto'>
 
             <div className="switch"
                 onClick={toggleSwitch}

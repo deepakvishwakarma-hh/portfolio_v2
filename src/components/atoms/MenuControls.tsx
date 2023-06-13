@@ -18,12 +18,12 @@ const MenuControls = ({ handleDefault, handleFocused, isMenuVisible, setMenuVisi
 
     return (
         (
-            <div className="w-full lg:h-full fixed lg:z-0 z-[999999]  top-0 left-0 p-[24px] 4xl:p-[50px] 3xl:p-[50px] 2xl:p-[50px] xl:p-[25px] grid grid-cols-2 hidescrollbar">
+            <div className="w-full lg:h-full fixed lg:z-0 z-[999999] top-0 left-0 p-[24px] 4xl:p-[50px] 3xl:p-[50px] 2xl:p-[50px] xl:p-[25px] grid grid-cols-2 hidescrollbar bg-red-500-- pointer-events-none">
                 <div>
                     <motion.h5
                         onClick={handleClick}
                         style={theme === 'light' ? { color: 'black' } : { color: 'white' }}
-                        className="cursor-pointer text-md text-black dark:text-white"
+                        className="cursor-pointer text-md text-black dark:text-white  pointer-events-auto"
                         onHoverEnd={handleDefault}
                         onHoverStart={handleFocused}
                         whileHover={hover_tracking_and_bold}>Sahej Tuli's <br /> Portfolio</motion.h5>
@@ -34,17 +34,17 @@ const MenuControls = ({ handleDefault, handleFocused, isMenuVisible, setMenuVisi
                     <MobileMenuToggleButton {...{ isMenuVisible, setMenuVisible }} />
                 </div>
 
-                <div className="hidden lg:flex items-end w-full h-full ">
+                <div className="hidden lg:flex items-end w-full h-full">
                     <Menu />
                 </div>
 
-                <div className="hidden lg:flex items-end justify-end w-full h-full ">
+                <div className="hidden lg:flex items-end justify-end w-full h-full">
                     <Link href={'/'}>
                         <motion.h5
                             onClick={() => { window.location.href = "mailto:someone @example.com" }}
                             onHoverEnd={handleDefault}
                             onHoverStart={handleFocused}
-                            className=" cursor-pointer text-md hidden lg:block"
+                            className=" cursor-pointer text-md hidden lg:block pointer-events-auto "
                             whileHover={{ letterSpacing: '3px', color: '#4b6cc1', fontWeight: "bold" }}>Available for work!</motion.h5>
                     </Link>
                 </div>
