@@ -47,13 +47,6 @@ const Locomotive: React.FC<Props> = ({ children }) => {
         current: 0,
     });
 
-
-
-
-
-
-
-
     return (
         <RLSProvider
             options={{
@@ -76,11 +69,10 @@ const Locomotive: React.FC<Props> = ({ children }) => {
                     const distance = scroll.current.current - scroll.current.cache;
                     // Then we will need to update the cache with the current scroll
                     scroll.current.cache = scroll.current.current;
-                    // animating..
-                    skew.start({ skewY: distance / 5 }, {
+                    // animating..  
+                    skew.start({ skewY: distance / 8 }, {
                         duration: .1,
                     })
-
                 });
 
             }}
@@ -93,7 +85,6 @@ const Locomotive: React.FC<Props> = ({ children }) => {
             }}>
             <motion.div
                 animate={skew}
-
                 data-scroll-container
                 data-scroll-direction="vertical"
                 className="4xl:px-[300px] 3xl:px-[250px] 2xl:px-[200px] xl:px-[176px] lg:px-[176px] md:px-[48px] px-[24px]" id="loco" ref={containerRef}>
