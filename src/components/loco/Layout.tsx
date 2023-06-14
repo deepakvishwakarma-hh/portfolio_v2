@@ -12,25 +12,6 @@ import { motion, useAnimationControls } from 'framer-motion'
 
 import { useState } from 'react'
 
-
-
-
-
-
-
-
-
-
-const clamp = (value: number, min: number, max: number) =>
-    // if the value is sm or equal to min then we return minimum,
-    // BUT if the value is greater or equel to max we return maximum ,
-    // OR else we return the value
-    value <= min ? min : value >= max ? max : value;
-
-
-
-
-
 const Locomotive: React.FC<Props> = ({ children }) => {
     const router = useRouter()
     const { asPath } = router
@@ -39,6 +20,8 @@ const Locomotive: React.FC<Props> = ({ children }) => {
 
 
     const skew = useAnimationControls()
+
+    const skewRef = useRef<any>(null)
 
 
     const scroll = useRef({
@@ -70,9 +53,10 @@ const Locomotive: React.FC<Props> = ({ children }) => {
                     // Then we will need to update the cache with the current scroll
                     scroll.current.cache = scroll.current.current;
                     // animating..  
-                    skew.start({ skewY: distance / 8 }, {
-                        duration: .1,
-                    })
+                    // skew.start({ skewY: distance / 8 }, {
+                    //     duration: .1,
+                    // })
+                    skewRef.current.style.transform = `skewY(${distance / 8}deg)`
                 });
 
             }}
@@ -83,14 +67,13 @@ const Locomotive: React.FC<Props> = ({ children }) => {
                 }, 500)
 
             }}>
-            <motion.div
-                animate={skew}
-                data-scroll-container
-                className="4xl:px-[300px] 3xl:px-[250px] 2xl:px-[200px] xl:px-[176px] lg:px-[176px] md:px-[48px] px-[24px]" id="loco" ref={containerRef}>
+            <div data-scroll-container className="4xl:px-[300px] 3xl:px-[250px] 2xl:px-[200px] xl:px-[176px] lg:px-[176px] md:px-[48px] px-[24px]" ref={containerRef}>
                 {!isMobile && <Cursor />}
-                {children}
-                {router.pathname !== '/projects/[name]' && <BackToTop />}
-            </motion.div>
+                <div id="skew-wrapper" ref={skewRef}>
+                    {children}
+                    {router.pathname !== '/projects/[name]' && <BackToTop />}
+                </div>
+            </div>
         </RLSProvider >
 
     )
