@@ -86,7 +86,6 @@ const Locomotive: React.FC<Props> = ({ children }) => {
             <motion.div
                 animate={skew}
                 data-scroll-container
-                data-scroll-direction="vertical"
                 className="4xl:px-[300px] 3xl:px-[250px] 2xl:px-[200px] xl:px-[176px] lg:px-[176px] md:px-[48px] px-[24px]" id="loco" ref={containerRef}>
                 {!isMobile && <Cursor />}
                 {children}
