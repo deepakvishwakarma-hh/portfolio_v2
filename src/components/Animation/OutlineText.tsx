@@ -23,18 +23,18 @@ const OutlineText: React.FC<props> = ({
     return (
         <motion.div
             onClick={onClick}
-            className='flex relative'
+            className='flex relative ct'
             onTouchEnd={handleInnerMouseLeave}
             onMouseEnter={handleInnerMouseEnter}
             onMouseLeave={handleInnerMouseLeave}
             onTouchStart={handleInnerMouseEnter}>
             <motion.h3
                 animate={simpleTextControl}
-                className={`tracking-wider ${classNames}`}
+                className={`tracking-wider ct ${classNames}`}
                 initial={{ opacity: 1 }}>{text}</motion.h3>
             <motion.h3
                 animate={OutlineTextControl}
-                className={`absolute outline-text  tracking-wider ${classNames}`}
+                className={`absolute outline-text ct  tracking-wider ${classNames}`}
                 initial={{ opacity: 1 }}>{text}</motion.h3>
         </motion.div>
 
