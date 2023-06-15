@@ -1,71 +1,94 @@
 [
     {
-        "name": "Chat App",
-        "slug": "chat-app",
-        "year": "2020",
-        "month": "september",
+        "name": " Portfolio",
+        "slug": "portfolio",
+        "year": "2023",
+        "month": "",
         "index": "01",
-        "github": "",
-        "live": "",
-        "image": "/images/default.webp",
+        "github": "https://github.com/sahejt/",
+        "image": "https://i.ibb.co/J576Lhz/7.png",
         "gallary": [
-            "/images/default.webp",
-            "/images/default.webp",
-            "/images/default.webp"
+            "https://i.ibb.co/R3zSWK4/6.png",
+            "https://i.ibb.co/znL1JZH/5.png",
+            "https://i.ibb.co/zVzCQWt/Untitled-1920-1080-px-12.png"
         ],
-        "overview": "This personal portfolio is one of my biggest projects, designed and developed to showcase my projects and to reflect myself. The very website that you're in right now is the work that I'm most proud of.",
-        "story": "I initially had the idea of trying to design and build a personal portfolio website sometime around March 2021. I haven't yet made any projects worth showcasing back then, but I still tried to give it a shot.In the process, I got stuck in a loop of attempting to design and code a portfolio website for months. I was unsatisfied by the outcome many times and thought that I could never make this happen.It all came together after knowing the kind of design that I want, making actual projects, and learning new frameworks and libraries. Everything finally snapped.",
-        "development": "I was not sure with the colors. I got so motivated and inspired by looking at portfolio websites at Awwwards that I was also baffled of the colors and design that I should use. But, I just knew I love black, white, and blue as a color combination.This website was initially intended to be built with React only. But after discovering Next.JS, it was a great choice to build the website with it. Next.JS tremendously improved the performance along with the optimization of images.Stylings for the UI were done with Styled Components. The library was a big help in making reusable and fully customizable components for the website.For the animations, they were all done with Framer Motion. It made it easy to create seamless and reactive animations",
+        "overview": "A personal portfolio website project showcasing my skills, achievements, and projects.",
+        "story": "As a passionate individual in the field of Software Development, I recognized the need to have an online presence that effectively represents my skills, experiences, and achievements. I embarked on a personal portfolio website project to create a captivating digital space where I can showcase my work and engage with potential clients, collaborators, or employers.",
+        "development": "I built my personal portfolio website using ReactJS, Next.js, Redux, TypeScript, JavaScript, HTML, and CSS. ReactJS provided a component-based architecture and enhanced user interface. Next.js improved performance and SEO capabilities through server-side rendering. Redux managed the application state efficiently, ensuring a consistent user experience. TypeScript ensured code maintainability and type safety. JavaScript, HTML, and CSS formed the foundation of the website, adding interactivity, structure, and visual design. This technology stack enabled me to create a dynamic and engaging portfolio website to showcase my skills, projects, and achievements.",
         "next": {
-            "name": "twitter clone",
-            "href": "twitter-clone"
+            "name": "E-Commerce",
+            "href": "e-commerce"
         }
     },
     {
-        "name": "twitter clone",
-        "slug": "twitter-clone",
-        "month": "september",
-        "github": "",
-        "live": "",
-        "year": "2020",
+        "name": "E-Commerce",
+        "slug": "e-commerce",
+        "month": "",
+        "github": "https://github.com/sahejt/baronwheels_alc_delivery",
+        "year": "2021",
         "index": "02",
-        "image": "/images/default.webp",
+        "image": "https://i.ibb.co/tMC6FVF/10.png",
         "gallary": [
-            "/images/default.webp",
-            "/images/default.webp",
-            "/images/default.webp"
+            "https://i.ibb.co/vPdwkPb/8.png",
+            "https://i.ibb.co/Tw8P0y7/9.png",
+            "https://i.ibb.co/vDLXDKW/11.png"
         ],
-        "overview": "This personal portfolio is one of my biggest projects, designed and developed to showcase my projects and to reflect myself. The very website that you're in right now is the work that I'm most proud of.",
-        "story": "I initially had the idea of trying to design and build a personal portfolio website sometime around March 2021. I haven't yet made any projects worth showcasing back then, but I still tried to give it a shot.In the process, I got stuck in a loop of attempting to design and code a portfolio website for months. I was unsatisfied by the outcome many times and thought that I could never make this happen.It all came together after knowing the kind of design that I want, making actual projects, and learning new frameworks and libraries. Everything finally snapped.",
-        "development": "I was not sure with the colors. I got so motivated and inspired by looking at portfolio websites at Awwwards that I was also baffled of the colors and design that I should use. But, I just knew I love black, white, and blue as a color combination.This website was initially intended to be built with React only. But after discovering Next.JS, it was a great choice to build the website with it. Next.JS tremendously improved the performance along with the optimization of images.Stylings for the UI were done with Styled Components. The library was a big help in making reusable and fully customizable components for the website.For the animations, they were all done with Framer Motion. It made it easy to create seamless and reactive animations",
+        "overview": "BarOnWheels is an e-commerce website that I created as a personal project to enhance my skills in web development and gain practical experience in building a functional online platform.",
+        "story": "The motivation behind the creation of BarOnWheels originates from a personal desire to gain hands-on experience and expand knowledge in the field of web development and entrepreneurship. The project was seen as an ideal opportunity to combine passion with skill development.",
+        "development": "The development of BarOnWheels involved various stages, starting with extensive planning and research. I tried many layouts to come up with something that's simple & visually appealing at the same time. After gathering requirements, I created wireframes and prototypes to visualize the website's layout and functionalities. The website is completely created using HTML, CSS, Javascript, PHP & MySQL.",
         "previous": {
-            "name": "chat app",
-            "href": "chat-app"
+            "name": "Portfolio",
+            "href": "portfolio"
         },
         "next": {
-            "name": "Meta clone",
-            "href": "meta-clone"
+            "name": "Chat App",
+            "href": "chat-app"
         }
     },
     {
-        "name": "Meta clone",
-        "slug": "meta-clone",
-        "month": "september",
-        "github": "",
-        "live": "",
-        "year": "2030",
+        "name": "Chat App",
+        "slug": "chat-app",
+        "month": "",
+        "github": "https://github.com/sahejt/talknow-react-chat-app",
+        "live": "https://talknow.sahejtuli.com",
+        "year": "2023",
         "index": "03",
-        "image": "/images/default.webp",
+        "image": "https://i.ibb.co/xzc1ZWD/2.png",
         "gallary": [
-            "/images/default.webp",
-            "/images/default.webp",
-            "/images/default.webp"
+            "https://i.ibb.co/XW5m8wh/4.png",
+            "https://i.ibb.co/xzc1ZWD/2.png",
+            "https://i.ibb.co/zNCnzRn/3.png"
         ],
-        "overview": "This personal portfolio is one of my biggest projects, designed and developed to showcase my projects and to reflect myself. The very website that you're in right now is the work that I'm most proud of.",
-        "story": "I initially had the idea of trying to design and build a personal portfolio website sometime around March 2021. I haven't yet made any projects worth showcasing back then, but I still tried to give it a shot.In the process, I got stuck in a loop of attempting to design and code a portfolio website for months. I was unsatisfied by the outcome many times and thought that I could never make this happen.It all came together after knowing the kind of design that I want, making actual projects, and learning new frameworks and libraries. Everything finally snapped.",
-        "development": "I was not sure with the colors. I got so motivated and inspired by looking at portfolio websites at Awwwards that I was also baffled of the colors and design that I should use. But, I just knew I love black, white, and blue as a color combination.This website was initially intended to be built with React only. But after discovering Next.JS, it was a great choice to build the website with it. Next.JS tremendously improved the performance along with the optimization of images.Stylings for the UI were done with Styled Components. The library was a big help in making reusable and fully customizable components for the website.For the animations, they were all done with Framer Motion. It made it easy to create seamless and reactive animations",
+        "overview": "TalkNow is a realtime chat app created using HTML, CSS, JavaScript, React, and Node, and uses Google Firebase as a database.",
+        "story": "The inspiration behind TalkNow stemmed from the desire to connect people from different parts of the world in real-time, fostering instant communication and meaningful connections. Recognizing the increasing need for instant messaging platforms, I embarked on creating TalkNow, a powerful chat application that enables users to engage in seamless conversations.",
+        "development": "TalkNow, a realtime chat app, was developed using HTML, CSS, JavaScript, React, and Firebase. The frontend was built with HTML, CSS, and JavaScript, creating an intuitive user interface. React was employed for interactive components and real-time functionality. The backend was implemented using Firebase, providing seamless messaging and data synchronization. Authentication mechanisms ensured secure access, while encryption protected user data. Additional features like typing indicators and message notifications enhanced the user experience. Thorough testing was conducted before deploying the app, resulting in a powerful and secure chat application for realtime communication.",
         "previous": {
-            "name": "chat app",
+            "name": "E-Commerce",
+            "href": "e-commerce"
+        },
+        "next": {
+            "name": "Mini Games",
+            "href": "mini-games"
+        }
+    },
+    {
+        "name": "Mini Games",
+        "slug": "mini-games",
+        "month": "",
+        "github": "https://github.com/sahejt/typetrek",
+        "live": "https://typetrek.sahejtuli.com",
+        "year": "2020",
+        "index": "04",
+        "image": "https://i.ibb.co/7tNM8d3/12.png",
+        "gallary": [
+            "https://i.ibb.co/312DFnw/13.png",
+            "https://i.ibb.co/7tNM8d3/12.png"
+        ],
+        "overview": "Mini Games is a collection of web-based games, including Pong and TypeTrek, built using solely HTML, CSS, and JavaScript.",
+        "story": "The concept behind Mini Games was to create a collection of simple and entertaining web-based games that could be enjoyed by users of all ages. Recognizing the potential of classic games in capturing the interest and nostalgia of players, I embarked on creating two standout games: Pong and TypeTrek.",
+        "development": "Mini Games, including Pong and TypeTrek, were created using only HTML, CSS, and JavaScript. The development process involved coding the game logic, designing visually appealing interfaces, and implementing smooth user interactions. HTML was used for structure, CSS for styling, and JavaScript for game mechanics and user input handling. The focus was on creating engaging gameplay and ensuring cross-browser compatibility, resulting in a collection of enjoyable web-based games.",
+        "previous": {
+            "name": "Chat App",
             "href": "chat-app"
         }
     }
