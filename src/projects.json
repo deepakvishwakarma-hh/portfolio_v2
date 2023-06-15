@@ -7,11 +7,11 @@
         "index": "01",
         "github": "",
         "live": "",
-        "image": "https://rchrdwllm.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fimage%2Fpublic%2Fimages%2Fmovie-search%2Fmovie-search-2.71226f0f4db891986c1f1ac271e6fb21.jpg&w=1920&q=100",
+        "image": "/images/default.webp",
         "gallary": [
-            "https://rchrdwllm.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fimage%2Fpublic%2Fimages%2Fmovie-search%2Fmovie-search-2.71226f0f4db891986c1f1ac271e6fb21.jpg&w=1920&q=100",
-            "https://rchrdwllm.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fimage%2Fpublic%2Fimages%2Fmovie-search%2Fmovie-search-2.71226f0f4db891986c1f1ac271e6fb21.jpg&w=1920&q=100",
-            "https://rchrdwllm.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fimage%2Fpublic%2Fimages%2Fmovie-search%2Fmovie-search-2.71226f0f4db891986c1f1ac271e6fb21.jpg&w=1920&q=100"
+            "/images/default.webp",
+            "/images/default.webp",
+            "/images/default.webp"
         ],
         "overview": "This personal portfolio is one of my biggest projects, designed and developed to showcase my projects and to reflect myself. The very website that you're in right now is the work that I'm most proud of.",
         "story": "I initially had the idea of trying to design and build a personal portfolio website sometime around March 2021. I haven't yet made any projects worth showcasing back then, but I still tried to give it a shot.In the process, I got stuck in a loop of attempting to design and code a portfolio website for months. I was unsatisfied by the outcome many times and thought that I could never make this happen.It all came together after knowing the kind of design that I want, making actual projects, and learning new frameworks and libraries. Everything finally snapped.",
@@ -29,11 +29,11 @@
         "live": "",
         "year": "2020",
         "index": "02",
-        "image": "https://rchrdwllm.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fimage%2Fpublic%2Fimages%2Fmovie-search%2Fmovie-search-2.71226f0f4db891986c1f1ac271e6fb21.jpg&w=1920&q=100",
+        "image": "/images/default.webp",
         "gallary": [
-            "https://rchrdwllm.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fimage%2Fpublic%2Fimages%2Fmovie-search%2Fmovie-search-2.71226f0f4db891986c1f1ac271e6fb21.jpg&w=1920&q=100",
-            "https://rchrdwllm.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fimage%2Fpublic%2Fimages%2Fmovie-search%2Fmovie-search-2.71226f0f4db891986c1f1ac271e6fb21.jpg&w=1920&q=100",
-            "https://rchrdwllm.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fimage%2Fpublic%2Fimages%2Fmovie-search%2Fmovie-search-2.71226f0f4db891986c1f1ac271e6fb21.jpg&w=1920&q=100"
+            "/images/default.webp",
+            "/images/default.webp",
+            "/images/default.webp"
         ],
         "overview": "This personal portfolio is one of my biggest projects, designed and developed to showcase my projects and to reflect myself. The very website that you're in right now is the work that I'm most proud of.",
         "story": "I initially had the idea of trying to design and build a personal portfolio website sometime around March 2021. I haven't yet made any projects worth showcasing back then, but I still tried to give it a shot.In the process, I got stuck in a loop of attempting to design and code a portfolio website for months. I was unsatisfied by the outcome many times and thought that I could never make this happen.It all came together after knowing the kind of design that I want, making actual projects, and learning new frameworks and libraries. Everything finally snapped.",
@@ -55,11 +55,11 @@
         "live": "",
         "year": "2030",
         "index": "03",
-        "image": "https://rchrdwllm.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fimage%2Fpublic%2Fimages%2Fmovie-search%2Fmovie-search-2.71226f0f4db891986c1f1ac271e6fb21.jpg&w=1920&q=100",
+        "image": "/images/default.webp",
         "gallary": [
-            "https://rchrdwllm.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fimage%2Fpublic%2Fimages%2Fmovie-search%2Fmovie-search-2.71226f0f4db891986c1f1ac271e6fb21.jpg&w=1920&q=100",
-            "https://rchrdwllm.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fimage%2Fpublic%2Fimages%2Fmovie-search%2Fmovie-search-2.71226f0f4db891986c1f1ac271e6fb21.jpg&w=1920&q=100",
-            "https://rchrdwllm.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fimage%2Fpublic%2Fimages%2Fmovie-search%2Fmovie-search-2.71226f0f4db891986c1f1ac271e6fb21.jpg&w=1920&q=100"
+            "/images/default.webp",
+            "/images/default.webp",
+            "/images/default.webp"
         ],
         "overview": "This personal portfolio is one of my biggest projects, designed and developed to showcase my projects and to reflect myself. The very website that you're in right now is the work that I'm most proud of.",
         "story": "I initially had the idea of trying to design and build a personal portfolio website sometime around March 2021. I haven't yet made any projects worth showcasing back then, but I still tried to give it a shot.In the process, I got stuck in a loop of attempting to design and code a portfolio website for months. I was unsatisfied by the outcome many times and thought that I could never make this happen.It all came together after knowing the kind of design that I want, making actual projects, and learning new frameworks and libraries. Everything finally snapped.",

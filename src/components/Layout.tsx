@@ -85,7 +85,6 @@ const Layout = ({ children }: any) => {
                     </motion.div>
                 </motion.div>
             ) : (
-
                 <>
                     <MenuControls {...{
                         handleDefault,
