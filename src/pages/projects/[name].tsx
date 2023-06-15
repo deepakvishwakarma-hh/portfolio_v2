@@ -37,8 +37,8 @@ const ProjectName: NextPage<project> = (props) => {
                 <h3 className='4xl:text-h4-4xl 3xl:text-h4-3xl 2xl:text-h4-2xl xl:text-h4-xl lg:text-h4-lg md:text-h4-md text-h4-sm pb-10'>Development</h3>
                 <p className='text-lg'>{development}</p>
                 <div className='flex gap-5'>
-                    <TrackingText handleClick={() => { window.open(github) }} text="Github Link" className='text-lg mt-5 text-gray cursor-pointer' />
-                    <TrackingText handleClick={() => { window.open(live) }} text="Live Demo" className='text-lg mt-5 text-gray cursor-pointer' />
+                    {github && <TrackingText handleClick={() => { window.open(github) }} text="Github Link" className='text-lg mt-5 text-gray cursor-pointer' />}
+                    {live && <TrackingText handleClick={() => { window.open(live) }} text="Live Demo" className='text-lg mt-5 text-gray cursor-pointer' />}
                 </div>
             </Section>
 
