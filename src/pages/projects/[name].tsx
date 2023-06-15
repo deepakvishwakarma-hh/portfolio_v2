@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { project } from '@/type'
 import { useEffect } from 'react'
 import data from '../../projects.json'
@@ -15,47 +16,55 @@ const ProjectName: NextPage<project> = (props) => {
     }, [props])
 
     return (
-        <div className='main'>
-            <Header {...{ name, index }} />
+        <>
+            <Head>
+                <title>{name} - Sahej Tuli's</title>
+                <meta name="description" content="Hello! I'm Sahej Tuli, A San Francisco based front-end web developer." />
+            </Head>
 
-            <Section>
-                <img src={image} alt="banner-image" />
-                <p className='text-lg pt-5 text-gray flex items-center gap-2'>{year} <span className='text-sm'>●</span> {name}</p>
-            </Section>
+            <div className='main'>
+                <Header {...{ name, index }} />
 
-            <Section className='pt-[20rem] max-w-3xl'>
-                <h3 className='4xl:text-h4-4xl 3xl:text-h4-3xl 2xl:text-h4-2xl xl:text-h4-xl lg:text-h4-lg md:text-h4-md text-h4-sm pb-10'>Overview</h3>
-                <p className='text-lg'>{overview}</p>
-            </Section>
+                <Section>
+                    <img src={image} alt="banner-image" />
+                    <p className='text-lg pt-5 text-gray flex items-center gap-2'>{year} <span className='text-sm'>●</span> {name}</p>
+                </Section>
 
-            <Section className='ml-auto pt-[10rem] max-w-3xl'>
-                <h3 className='4xl:text-h4-4xl 3xl:text-h4-3xl 2xl:text-h4-2xl xl:text-h4-xl lg:text-h4-lg md:text-h4-md text-h4-sm pb-10'>Story</h3>
-                <p className='text-lg'>{story}</p>
-            </Section>
+                <Section className='pt-[20rem] max-w-3xl'>
+                    <h3 className='4xl:text-h4-4xl 3xl:text-h4-3xl 2xl:text-h4-2xl xl:text-h4-xl lg:text-h4-lg md:text-h4-md text-h4-sm pb-10'>Overview</h3>
+                    <p className='text-lg'>{overview}</p>
+                </Section>
 
-            <Section className='pt-[10rem] max-w-3xl'>
-                <h3 className='4xl:text-h4-4xl 3xl:text-h4-3xl 2xl:text-h4-2xl xl:text-h4-xl lg:text-h4-lg md:text-h4-md text-h4-sm pb-10'>Development</h3>
-                <p className='text-lg'>{development}</p>
-                <div className='flex gap-5'>
-                    {github && <TrackingText handleClick={() => { window.open(github) }} text="Github Link" className='text-lg mt-5 text-gray cursor-pointer' />}
-                    {live && <TrackingText handleClick={() => { window.open(live) }} text="Live Demo" className='text-lg mt-5 text-gray cursor-pointer' />}
-                </div>
-            </Section>
+                <Section className='ml-auto pt-[10rem] max-w-3xl'>
+                    <h3 className='4xl:text-h4-4xl 3xl:text-h4-3xl 2xl:text-h4-2xl xl:text-h4-xl lg:text-h4-lg md:text-h4-md text-h4-sm pb-10'>Story</h3>
+                    <p className='text-lg'>{story}</p>
+                </Section>
 
-            <Section>
-                {gallary.map((img, index) => (
-                    <div className='flex even:justify-end py-[10rem]' key={index}>
-                        <img
-                            src={img}
-                            alt="banner-image"
-                            className='w-[80%]'
-                        />
+                <Section className='pt-[10rem] max-w-3xl'>
+                    <h3 className='4xl:text-h4-4xl 3xl:text-h4-3xl 2xl:text-h4-2xl xl:text-h4-xl lg:text-h4-lg md:text-h4-md text-h4-sm pb-10'>Development</h3>
+                    <p className='text-lg'>{development}</p>
+                    <div className='flex gap-5'>
+                        {github && <TrackingText handleClick={() => { window.open(github) }} text="Github Link" className='text-lg mt-5 text-gray cursor-pointer' />}
+                        {live && <TrackingText handleClick={() => { window.open(live) }} text="Live Demo" className='text-lg mt-5 text-gray cursor-pointer' />}
                     </div>
-                ))}
-            </Section>
+                </Section>
 
-            <Footer  {...{ previous, next }} />
-        </div>
+                <Section>
+                    {gallary.map((img, index) => (
+                        <div className='flex even:justify-end py-[10rem]' key={index}>
+                            <img
+                                src={img}
+                                alt="banner-image"
+                                className='w-[80%]'
+                            />
+                        </div>
+                    ))}
+                </Section>
+
+                <Footer  {...{ previous, next }} />
+            </div>
+
+        </>
     )
 }
 
