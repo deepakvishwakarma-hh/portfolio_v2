@@ -117,7 +117,7 @@ const ProjectListItem: React.FC<Props> = ({ index, item }) => {
                             transition={{ duration: .6 }}>
                             <img
                                 src={item.image}
-                                className='w-[650px] bg-red-500 h-[400px] absolute right-0 -z-1' />
+                                className='w-[600px] bg-red-500 h-[338pxw] absolute right-0 -z-1' />
                         </motion.div>
                     )}
                 </AnimatePresence>
