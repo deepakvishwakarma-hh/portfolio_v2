@@ -1,4 +1,5 @@
 import { project } from '@/type'
+import { useEffect } from 'react'
 import data from '../../projects.json'
 import { GetStaticProps, NextPage } from "next"
 import Section from '@/components/loco/section'
@@ -8,6 +9,11 @@ import TrackingText from '@/components/Animation/TextTracking';
 
 const ProjectName: NextPage<project> = (props) => {
     const { name, index, story, image, gallary, overview, development, previous, next, live, github, year } = props
+
+    useEffect(() => {
+        window.dispatchEvent(new Event('resize'))
+    }, [props])
+
     return (
         <div className='main'>
             <Header {...{ name, index }} />

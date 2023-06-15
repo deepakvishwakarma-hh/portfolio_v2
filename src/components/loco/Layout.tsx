@@ -20,11 +20,11 @@ const Locomotive: React.FC<Props> = ({ children }) => {
                 smooth: true,
                 getDirection: true,
                 smoothMobile: false,
-                lerp: 0.08
+                lerp: 0.08,
+                scrollFromAnywhere: true,
+                reloadOnContextChange: true,
             }}
-            watch={
-                ["/", 1170]
-            }
+            watch={[`${router.asPath}`]}
             location={asPath}
             containerRef={containerRef}
             onLocationChange={(scroll: any) => {
