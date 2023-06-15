@@ -1,13 +1,14 @@
+import dynamic from 'next/dynamic'
 import { useRouter } from 'next/router';
-import { cursor } from "@/store/slices";
 import Locomotive from './loco/Layout';
 import MenuControls from "./atoms/MenuControls";
 import { useState, useEffect, useMemo } from 'react'
 import HorizontalLine from './atoms/HorizontalLines';
-import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import { AnimatePresence, motion, useAnimationControls } from 'framer-motion'
+const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
+    ssr: false
+});
 
-import Cursor from './Cursor';
 
 const getRandomText = () => {
     function getDayName() {
@@ -23,21 +24,12 @@ const getRandomText = () => {
 }
 
 const Layout = ({ children }: any) => {
-    const dispatch = useAppDispatch()
     const isMobile = useMobileDetect()
     const [AnimeState, setAnimeState] = useState(true)
     const [isMenuVisible, setMenuVisible] = useState(!true)
     const loadingTextAnimationControls = useAnimationControls()
 
     const random_text = useMemo(() => getRandomText(), [])
-
-    const handleFocused = () => {
-        dispatch(cursor('focused'))
-    }
-
-    const handleDefault = () => {
-        dispatch(cursor('default'))
-    }
 
     useEffect(() => {
         loadingTextAnimationControls.start({ y: "0%", opacity: 1 }, {
@@ -80,15 +72,31 @@ const Layout = ({ children }: any) => {
                             animate={loadingTextAnimationControls}
                             initial={{ opacity: 1 }}>
                             <p className='4xl:text-h3-4xl 3xl:text-h3-3xl 2xl:text-h3-2xl xl:text-h3-xl lg:text-h3-lg md:text-h3-md text-h3-xs !font-bold dark:text-white text-black first-letter:capitalize
-                                '>random_text</p>
+                                '>{random_text}</p>
                         </motion.div>
                     </motion.div>
                 </motion.div>
             ) : (
                 <>
-                    ``                    <MenuControls {...{
-                        handleDefault,
-                        handleFocused,
+
+                    <AnimatedCursor
+                        innerSize={15}
+                        outerSize={15}
+                        color="75, 108, 193"
+                        outerAlpha={0.4}
+                        innerScale={0.7}
+                        outerScale={5}
+                        trailingSpeed={15}
+                        clickables={[
+                            'a',
+                            'select',
+                            'textarea',
+                            'button',
+                            '.ct',
+                        ]}
+                    />
+
+                    <MenuControls {...{
                         isMenuVisible,
                         setMenuVisible
                     }} />
@@ -223,14 +231,11 @@ import { useTheme } from 'next-themes';
 import useMobileDetect from '@/hooks/useMobileDetect';
 
 const Toggle = () => {
-    const dispatch = useAppDispatch()
     const { theme, setTheme } = useTheme();
 
     const handleFocused = () => {
-        dispatch(cursor('focused'))
     }
     const handleDefault = () => {
-        dispatch(cursor('default'))
     }
 
     const toggleSwitch = () => {

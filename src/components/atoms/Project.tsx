@@ -5,8 +5,6 @@ interface Props {
 
 import { useState } from "react"
 import { useRouter } from "next/router"
-import { cursor } from "@/store/slices"
-import { useAppDispatch } from "@/store/hooks"
 import { motion, AnimatePresence, useAnimationControls } from 'framer-motion'
 
 const ProjectListItem: React.FC<Props> = ({ index, item }) => {
@@ -45,7 +43,6 @@ const ProjectListItem: React.FC<Props> = ({ index, item }) => {
     }
 
     const { push } = useRouter()
-    const dispatch = useAppDispatch()
     const [visible, setVisible] = useState(false)
 
     const handleMouseEnter = () => {
@@ -62,11 +59,9 @@ const ProjectListItem: React.FC<Props> = ({ index, item }) => {
     const OutlineTextControl = useAnimationControls()
 
     const handleInnerMouseEnter = () => {
-        dispatch(cursor('focused'))
         OutlineTextControl.start({ opacity: 0 }, { duration: .4 })
     }
     const handleInnerMouseLeave = () => {
-        dispatch(cursor('default'))
         OutlineTextControl.start({ opacity: 1 }, { duration: .4 })
     }
 
@@ -75,7 +70,7 @@ const ProjectListItem: React.FC<Props> = ({ index, item }) => {
             onClick={handleClick}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            className="cursor-pointer">
+            className="cursor-pointer ct">
 
             <motion.div
                 variants={line}

@@ -5,9 +5,7 @@ interface props {
 
 import React from 'react'
 import { project } from '@/type'
-import { cursor } from "@/store/slices"
 import { useRouter } from 'next/router'
-import { useAppDispatch } from "@/store/hooks"
 import { motion, useAnimationControls } from "framer-motion"
 import Section from '../loco/section'
 
@@ -31,13 +29,11 @@ const ProjectFooter: React.FC<props> = ({ next, previous }) => {
 
 const Next = ({ name, href }: { name: string, href: string }) => {
     const router = useRouter()
-    const dispatch = useAppDispatch()
     const simpleTextControl = useAnimationControls()
     const OutlineTextControl = useAnimationControls()
     const trackingTextControl = useAnimationControls()
 
     const handleInnerMouseEnter = () => {
-        dispatch(cursor('focused'))
         OutlineTextControl.start({ opacity: 0 }, { duration: .4 })
         trackingTextControl.start({
             letterSpacing: '4px',
@@ -47,7 +43,6 @@ const Next = ({ name, href }: { name: string, href: string }) => {
 
     }
     const handleInnerMouseLeave = () => {
-        dispatch(cursor('default'))
         OutlineTextControl.start({ opacity: 1 }, { duration: .4 })
         trackingTextControl.start({
             letterSpacing: '1px',
@@ -61,7 +56,7 @@ const Next = ({ name, href }: { name: string, href: string }) => {
     }
 
     return (
-        <div className='grid md:justify-end cursor-pointer flex-1'
+        <div className='grid md:justify-end cursor-pointer flex-1 ct'
             onMouseEnter={handleInnerMouseEnter}
             onMouseLeave={handleInnerMouseLeave}
             onClick={handleClick} >
@@ -86,13 +81,11 @@ const Next = ({ name, href }: { name: string, href: string }) => {
 
 const Previous = ({ name, href }: { name: string, href: string }) => {
     const router = useRouter()
-    const dispatch = useAppDispatch()
     const simpleTextControl = useAnimationControls()
     const OutlineTextControl = useAnimationControls()
     const trackingTextControl = useAnimationControls()
 
     const handleInnerMouseEnter = () => {
-        dispatch(cursor('focused'))
         OutlineTextControl.start({ opacity: 0 }, { duration: .4 })
         trackingTextControl.start({
             letterSpacing: '4px',
@@ -102,7 +95,6 @@ const Previous = ({ name, href }: { name: string, href: string }) => {
     }
 
     const handleInnerMouseLeave = () => {
-        dispatch(cursor('default'))
         OutlineTextControl.start({ opacity: 1 }, { duration: .4 })
         trackingTextControl.start({
             letterSpacing: '1px',
@@ -118,7 +110,7 @@ const Previous = ({ name, href }: { name: string, href: string }) => {
     return (
         <div
             onClick={handleClick}
-            className='cursor-pointer flex-1'
+            className='cursor-pointer flex-1 ct'
             onMouseEnter={handleInnerMouseEnter}
             onMouseLeave={handleInnerMouseLeave}>
             <motion.div className='flex relative'>

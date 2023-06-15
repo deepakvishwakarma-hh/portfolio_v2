@@ -4,24 +4,19 @@ interface props {
     onClick?: any
 }
 
-import { cursor } from "@/store/slices"
-import { useAppDispatch } from "@/store/hooks"
 import { motion, useAnimationControls } from "framer-motion"
 
 const OutlineText: React.FC<props> = ({
     text, classNames, onClick
 }) => {
-    const dispatch = useAppDispatch()
 
     const simpleTextControl = useAnimationControls()
     const OutlineTextControl = useAnimationControls()
 
     const handleInnerMouseEnter = () => {
-        dispatch(cursor('focused'))
         OutlineTextControl.start({ opacity: 0 }, { duration: .4 })
     }
     const handleInnerMouseLeave = () => {
-        dispatch(cursor('default'))
         OutlineTextControl.start({ opacity: 1 }, { duration: .4 })
     }
 

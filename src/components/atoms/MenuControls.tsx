@@ -9,7 +9,7 @@ const DynamicToggler = dynamic(() => import('./ThemeToggle'),
 import { useTheme } from 'next-themes'
 import { useRouter } from 'next/router'
 
-const MenuControls = ({ handleDefault, handleFocused, isMenuVisible, setMenuVisible }: any) => {
+const MenuControls = ({ isMenuVisible, setMenuVisible }: any) => {
     const { theme } = useTheme()
     const { push } = useRouter()
     const handleClick = () => {
@@ -22,10 +22,8 @@ const MenuControls = ({ handleDefault, handleFocused, isMenuVisible, setMenuVisi
                 <div>
                     <motion.h5
                         onClick={handleClick}
-                        onHoverEnd={handleDefault}
-                        onHoverStart={handleFocused}
                         style={theme === 'light' ? { color: 'black' } : { color: 'white' }}
-                        className="cursor-pointer text-md text-black dark:text-white  pointer-events-auto"
+                        className="text-md text-black dark:text-white  pointer-events-auto ct"
                         whileHover={hover_tracking_and_bold}>Sahej Tuli's <br /> Portfolio</motion.h5>
                 </div>
 
@@ -41,8 +39,6 @@ const MenuControls = ({ handleDefault, handleFocused, isMenuVisible, setMenuVisi
                 <div className="hidden lg:flex items-end justify-end w-full h-full">
                     <Link href={'/'}>
                         <motion.h5
-                            onHoverEnd={handleDefault}
-                            onHoverStart={handleFocused}
                             onClick={() => { window.location.href = "mailto:someone @example.com" }}
                             className=" cursor-pointer text-md hidden lg:block pointer-events-auto"
                             whileHover={{ letterSpacing: '3px', color: '#4b6cc1', fontWeight: "bold" }}>Available for work!</motion.h5>

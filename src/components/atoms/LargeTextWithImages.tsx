@@ -5,10 +5,9 @@ interface Props {
     first_image_url: string,
     second_image_url: string
 }
-import { cursor } from "@/store/slices"
 import { useRouter } from "next/router"
-import { useAppDispatch } from "@/store/hooks"
 import { motion, useAnimationControls } from 'framer-motion'
+import Link from "next/link"
 
 const LargeTextWithImages: React.FC<Props> = ({
     href,
@@ -17,17 +16,14 @@ const LargeTextWithImages: React.FC<Props> = ({
     first_image_url,
     second_image_url }) => {
     const { push } = useRouter()
-    const dispatch = useAppDispatch()
     const simpleTextControl = useAnimationControls()
     const OutlineTextControl = useAnimationControls()
 
     const handleInnerMouseEnter = () => {
-        dispatch(cursor('focused'))
         OutlineTextControl.start({ opacity: 0 }, { duration: .4 })
     }
 
     const handleInnerMouseLeave = () => {
-        dispatch(cursor('default'))
         OutlineTextControl.start({ opacity: 1 }, { duration: .4 })
     }
 
@@ -43,31 +39,34 @@ const LargeTextWithImages: React.FC<Props> = ({
     )
 
     return (
-        <motion.div
-            onClick={handleClick}
-            onTouchEnd={handleInnerMouseLeave}
-            onTouchStart={handleInnerMouseEnter}
-            onMouseEnter={handleInnerMouseEnter}
-            onMouseLeave={handleInnerMouseLeave}
-            className='py-[5rem] border-y-[1px] border-gray cursor-pointer'>
-            <div
-                data-scroll
-                data-scroll-speed="1"
-                className="lg:block hidden mb-10"
-            >{comp}
-            </div>
+        <Link href={`/projects/${href}`}>
+            <motion.div
+                onClick={handleClick}
+                onTouchEnd={handleInnerMouseLeave}
+                onTouchStart={handleInnerMouseEnter}
+                onMouseEnter={handleInnerMouseEnter}
+                onMouseLeave={handleInnerMouseLeave}
+                className='py-[5rem] border-y-[1px] border-gray'>
+                <div
+                    data-scroll
+                    data-scroll-speed="1"
+                    className="lg:block hidden mb-10"
+                >{comp}
+                </div>
 
-            <div className="lg:hidden block">{comp}</div>
-            <p className='text-lg text-gray mb-[2rem]'>{discription}</p>
-            <img src={first_image_url} width="60%" className="ml-auto" alt="project-image" />
-            <div
-                data-scroll
-                data-scroll-speed="2"
-                className="-mt-[6rem] mb-[5rem]">
-                <img src={second_image_url} width="60%" className="" alt="poject-image" />
-            </div>
+                <div className="lg:hidden block">{comp}</div>
+                <p className='text-lg text-gray mb-[2rem]'>{discription}</p>
+                <img src={first_image_url} width="60%" className="ml-auto" alt="project-image" />
+                <div
+                    data-scroll
+                    data-scroll-speed="2"
+                    className="-mt-[6rem] mb-[5rem]">
+                    <img src={second_image_url} width="60%" className="" alt="poject-image" />
+                </div>
 
-        </motion.div >
+            </motion.div >
+
+        </Link>
     )
 }
 

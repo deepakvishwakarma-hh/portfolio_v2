@@ -50,7 +50,7 @@
 body {
   color: #000;
   background: #fff;
-  transition: all 1s;
+  transition: all .5s;
   font-family: 'Manrope', sans-serif !important;
   overscroll-behavior-y: none;
   text-rendering: optimizeLegibility;
@@ -61,6 +61,7 @@ body {
 .dark,
 .dark body {
   color: #fff;
+  transition: all .5s;
   background: #000;
   font-family: 'Manrope', sans-serif !important;
 }
